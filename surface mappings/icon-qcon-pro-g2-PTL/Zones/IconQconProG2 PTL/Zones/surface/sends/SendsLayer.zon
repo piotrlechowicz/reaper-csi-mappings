@@ -1,0 +1,6 @@
+Zone "SendsLayer"
+    IncludedZones
+        "SendsFunctionKeys"
+        "FxMenuNavigationZone"
+    IncludedZonesEnd
+ZoneEnd

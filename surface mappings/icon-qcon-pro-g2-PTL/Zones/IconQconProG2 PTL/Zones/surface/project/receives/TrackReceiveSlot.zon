@@ -1,0 +1,28 @@
+Zone "TrackReceiveSlot"
+    TrackReceiveSlotNavigator
+
+    DisplayUpper|      TrackReceiveNameDisplay
+    DisplayLower|      TrackNameDisplay
+
+    Control+DisplayLower|       TrackReceivePanDisplay
+    Control+Alt+DisplayLower|   TrackReceivePanDisplay
+    Alt+DisplayLower|           TrackReceiveVolumeDisplay
+
+    Rotary|         TrackReceivePan
+    RotaryPush|     TrackReceivePrePost
+
+    RecordArm|      TrackReceivePrePost
+    InvertFB+Solo|  TrackReceivePrePost
+
+    Mute|           TrackReceiveMute
+    Fader|          TrackReceiveVolume
+    Fader|Touch+DisplayLower|   TrackReceiveVolumeDisplay
+
+    BankLeft           ReceiveSlotBank "-1"
+    BankRight          ReceiveSlotBank "1"
+
+    ChannelRight TrackBank "1"
+    Shift+ChannelRight TrackBank "8"
+    ChannelLeft TrackBank "-1"
+    Shift+ChannelLeft TrackBank "-8"
+ZoneEnd

@@ -1,0 +1,20 @@
+Zone "SelectedTrackReceive"
+    SelectedTrackReceiveNavigator
+
+    DisplayUpper|       TrackReceiveNameDisplay
+    DisplayLower|       TrackNameDisplay
+
+    Control+DisplayLower|       TrackReceivePanDisplay
+    Control+Alt+DisplayLower|   TrackReceivePanDisplay
+    Alt+DisplayLower|           TrackReceiveVolumeDisplay
+
+    Rotary|         TrackReceivePan
+    RotaryPush|     TrackReceivePrePost
+
+    RecordArm|      TrackReceivePrePost
+    InvertFB+Solo|  TrackReceivePrePost
+
+    Mute|           TrackReceiveMute
+    Fader|          TrackReceiveVolume
+    Fader|Touch+DisplayLower|   TrackReceiveVolumeDisplay
+ZoneEnd

@@ -1,0 +1,23 @@
+Zone "AutomationFunctionKeysHelp"
+    IncludedZones
+        "ClearDisplay"
+    IncludedZonesEnd
+
+    DisplayUpper1 FixedTextDisplay "F1-4   "
+    DisplayUpper2 FixedTextDisplay "Trk env"
+    DisplayUpper3 FixedTextDisplay ": Arm /"
+    DisplayUpper4 FixedTextDisplay " Disarm"
+    DisplayUpper5 FixedTextDisplay " / Show"
+    DisplayUpper6 FixedTextDisplay " / Hide"
+
+
+    DisplayLower1 FixedTextDisplay "F5-8   "
+    DisplayLower2 FixedTextDisplay "Prev / "
+    DisplayLower3 FixedTextDisplay "Next / "
+    DisplayLower4 FixedTextDisplay "Select "
+    DisplayLower5 FixedTextDisplay "pts / R"
+    DisplayLower6 FixedTextDisplay "educe p"
+    DisplayLower7 FixedTextDisplay "ts (S+ "
+    DisplayLower8 FixedTextDisplay "delete)"
+
+ZoneEnd

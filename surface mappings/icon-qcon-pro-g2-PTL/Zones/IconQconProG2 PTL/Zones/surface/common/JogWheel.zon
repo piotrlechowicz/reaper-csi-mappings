@@ -1,0 +1,80 @@
+/ ***********************************
+/ JogWheel zone
+/
+/ Control - slower move
+/ Alt - slowest move
+/ Shift   - Select while moving
+/ ***********************************
+Zone "JogWheel"
+	JogWheelRotaryCW 			Reaper "40105"					// View: Move cursor right 1 pixel
+	JogWheelRotaryCCW 			Reaper "40104"					// View: Move cursor left 1 pixel
+	Control+JogWheelRotaryCW 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW 		Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW2 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW2 			Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW2 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW2 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW2 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW2 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW2 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW2 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW3 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW3		 	Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW3 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW3 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW3 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW3 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW3 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW3 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW4 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW4 			Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW4 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW4 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW4 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW4 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW4 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW4 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW5 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW5 			Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW5 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW5 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW5 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW5 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW5 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW5 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW6 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW6 			Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW6 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW6 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW6 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW6	 	Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW6 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW6 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW7 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW7 			Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW7 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW7 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW7 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW7 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW7 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW7 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+
+	JogWheelRotaryCW8 			Reaper "41667"					// View: Move cursor right 8 pixels
+	JogWheelRotaryCCW8 			Reaper "41666"					// View: Move cursor left 8 pixels
+	Control+JogWheelRotaryCW8 	Reaper "_SWS_MOVECUR5MSRIGHT"	// SWS: Move cursor right 5ms
+	Control+JogWheelRotaryCCW8 	Reaper "_SWS_MOVECUR5MSLEFT"	// SWS: Move cursor left 5ms
+	Alt+JogWheelRotaryCW8 		Reaper "_SWS_MOVECUR1MSRIGHT"	// SWS: Move cursor right 1ms
+	Alt+JogWheelRotaryCCW8 		Reaper "_SWS_MOVECUR1MSLEFT"	// SWS: Move cursor left 1ms
+	Shift+JogWheelRotaryCW8 	Reaper "40103"					// Time selection: Move cursor right, creating time selection
+	Shift+JogWheelRotaryCCW8 	Reaper "40102"					// Time selection: Move cursor left, creating time selection
+ZoneEnd

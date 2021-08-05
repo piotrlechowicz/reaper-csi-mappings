@@ -1,0 +1,25 @@
+Zone "AutomationFunctionKeys"
+
+    Help GoZone "AutomationFunctionKeysHelp"
+    Control+Help GoZone "AutomationFunctionKeysHelp2"
+
+    F1  Reaper "_S&M_ARMALLENVS"     // SWS/S&M: Arm all active envelopes for selected tracks
+    F2  Reaper "_S&M_DISARMALLENVS"  // SWS/S&M: Disarm all active envelopes for selected tracks
+    F3  Reaper "41148" // Envelope: Show all envelopes for tracks
+    F4  Reaper "40889"  // Envelope: Hide all envelopes for tracks
+
+    F5  Reaper "41863" Track: Select previous envelope
+    F6  Reaper "41864" Track: Select next envelope
+    F7  Reaper "40330" // Envelope: Select points in time selection
+    F8  Reaper "42208" // Envelope: Reduce number of selected points by half
+    Shift+F8 Reaper "40333" // Envelope: Delete all selected points
+
+
+    F1L2 Reaper "40908" // Global automation override: Toggle bypass all automation
+    F2L2 Reaper "41163" // Automation: Unarm all envelopes
+    F3L2 Reaper "41150" // Envelope: Hide all envelopes for all tracks
+
+    Control+Alt+F4L2 Reaper "40065" // Envelope: Clear or remove envelope
+
+    F5L2 Reaper "40088" // Automation: Set all tracks automation mode to trim/read
+ZoneEnd

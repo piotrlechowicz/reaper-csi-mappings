@@ -1,0 +1,10 @@
+Zone "FxMenuNavigationZone"
+    ChannelRight TrackBank "1"
+    Shift+ChannelRight TrackBank "8"
+    ChannelLeft TrackBank "-1"
+    Shift+ChannelLeft TrackBank "-8"
+
+    BankLeft Reaper "_S&M_MOVE_FX_UP"		    // SWS/S&M: Move selected FX up in chain for selected tracks
+	BankRight Reaper "_S&M_MOVE_FX_DOWN"		// SWS/S&M: Move selected FX down in chain for selected tracks
+
+ZoneEnd

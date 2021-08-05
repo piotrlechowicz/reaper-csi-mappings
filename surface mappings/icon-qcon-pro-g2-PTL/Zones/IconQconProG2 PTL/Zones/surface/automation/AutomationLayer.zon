@@ -1,0 +1,5 @@
+Zone "AutomationLayer"
+    IncludedZones
+        "AutomationLayerGlobalMode"
+    IncludedZonesEnd
+ZoneEnd

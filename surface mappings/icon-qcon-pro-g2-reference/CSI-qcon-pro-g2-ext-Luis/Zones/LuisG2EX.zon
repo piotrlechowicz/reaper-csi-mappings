@@ -1,0 +1,289 @@
+/ ==========================================
+/ ZONE file for QCon Pro G2 by Luis
+/ ==========================================
+/ Since I've altered the MTS file to reflect the button names printed on the controller, then the entire ZONE file also
+/ has to be altered. Here is what I've come up with so far.
+/ v0.003
+/ A big thanks to all those helping with the CSI Project at the Reaper Forum: https://forum.cockos.com/showthread.php?t=183143
+
+/ ==============================================================================================================
+/ ZONE HOME - This defines the zones and also lets the controller know to send widgets based on selected track
+/ ==============================================================================================================
+ Zone Home
+	OnTrackSelection MapSelectedTrackSendsToWidgets
+	OnTrackSelection MapSelectedTrackFXToMenu
+
+	IncludedZones
+		"Buttons|"
+		"Channel|1-8"
+	IncludedZonesEnd
+
+ZoneEnd
+
+/ =========================================================================================================================
+/ ZONE "BUTTONS|" - these are buttons on the right side of the controller and where most of the customization will happen
+/ =========================================================================================================================
+Zone "Buttons|"
+	
+
+/	MODIFIERS - these are being placed at the top so they will work when used in combinations below
+/	-------------------------------------------------------------------------------------------------
+	Control Control		// Will make button VST act as a modifier: Control
+	Alt Alt		// Will make button Master act as modifier: Alt
+	Shift Shift		// Self explanatory. The Reaper overlay has shift at the upper right but I like these modifiers lower
+	Option Option	// Not too interested in the Scrub (hearing sound) feature, but this can be a modifier: Option
+
+/	TRACK/FADER CONTROLS
+/	------------------------------
+	Flip Reaper "40346"			// Toggle fullscreen
+	ChannelLeft TrackBank "-1"	// Bank one track to the left
+	ChannelRight TrackBank "1"	// Bank one track to the right
+	BankLeft TrackBank "-8"		// Bank eight tracks to the left
+	BankRight TrackBank "8"		// Bank eight tracks to the right
+	
+/	NAME/VALUE - 
+/	--------------------------------------
+	nameValue GoZone Home				// presumable this brings you to the Home Zone if you are stuck in another zone
+	smpteBeats CycleTimeDisplayModes	// cycles through the time display modes on the upper right hand red led defines
+	
+/	DAW MODE/UTILITIES
+/	------------------------------
+	Undo Reaper "40029"			// Edit: Undo
+	Shift+Undo Reaper "40072"	// View: Show undo history window
+	Redo Reaper "40030"			// Edit: Redo
+	Save Reaper "40026"			// File: Save project
+	Shift+Save Reaper "41895"	// File: Save new version of project (automatically increment project name)
+	Alt+Save Reaper "40022"		// File: Save project as...
+	Control+Save Reaper "40015"	// File: Render project to disk...
+	
+/	FUNCTIONS -
+/ 	----------------------------------------------
+	F1 Reaper "40702"							// Track: Insert new track at end of track list 
+	F2 Reaper "40701"							// Insert virtual instrument on new track...
+	F3 Reaper "40062"							// Track: Duplicate tracks
+	F4 Reaper "40005"							// Track: Remove tracks 
+	F5 Reaper "40495"							// Track: Cycle track record monitor
+	F6 Reaper "40344"							// Track: Toggle FX bypass on all tracks
+	F7 Reaper "8"								// Track: Toggle FX bypass for selected tracks
+	F8 Reaper "_S&M_DEL_ALL_FXCHAINSLOT"		// SWS/S&M: Resources - Delete all FX chain slots
+	F1L2 Reaper "40293"							// Track: View routing and I/O for current/last touched track
+	F2L2 Reaper "1042"							// Track: Cycle folder collapsed state
+	F3L2 Reaper "_S&M_TOGLFXCHAIN"				// SWS/S&M: Toggle show FX chain windows for selected tracks
+	F4L2 Reaper "_S&M_FXBYPSEL"					// SWS/S&M: Toggle selected FX bypass for selected tracks
+	F5L2 Reaper "_S&M_SELFXNEXT"				// SWS/S&M: Select next FX (cycling) for selected tracks
+	F6L2 Reaper "40344"							// Track: Toggle FX bypass on all tracks
+	F7L2 Reaper "40549"							// Mixer: Toggle show FX inserts if space available
+	F8L2 Reaper "_BR_NORMALIZE_LOUDNESS_ITEMS"	// SWS/BR: Normalize loudness of selected items/tracks...
+	//F7 Reaper "41817"							// View: Continuous scrolling during playback
+	
+/	ASSIGNMENTS -
+/	------------------------------------------
+	PageUp Reaper "_S&M_SHOWNOTESHELP"		// SWS/S&M: Open/close Notes window (project notes)
+	Send Reaper "40293"						// Track: View routing and I/O for current/last touched track
+	Send ToggleMapSelectedTrackSends		// Selected Track Sends get mapped to faders and code below opens screen
+	Send GoZone SendsEngaged				// Sending to other Zone to make sure it toggles from SENDS properly
+	Pan Reaper "_S&M_SELFXPREV"				// SWS/S&M: Select previous FX (cycling) for selected tracks
+////
+	Inserts Reaper "_S&M_TOGLFXCHAIN"		// SWS/S&M: Toggle show FX chain windows for selected tracks
+	Inserts ToggleMapSelectedTrackFXMenu	// selected track fx get mapped to faders and code below opens menu
+	Shift+Inserts GoZone FocusedFXParam		// need to verify what this means??
+
+	EQ Reaper "_S&M_SELFXNEXT"				// SWS/S&M: Select next FX (cycling) for selected tracks
+	FXSend Reaper "40016"					// Options: Preferences...
+	
+/	AUTOMATION -
+/	--------------------------------------
+	Read TrackAutoMode "1"				// Set track to automation Read mode
+	Shift+Read GlobalAutoMode "1"		// Set all tracks to automation Read mode
+	Write TrackAutoMode "3"				// Set track to automation Write mode
+	Shift+Write GlobalAutoMode "3"		// Set all tracks to automation Write mode
+	Trim TrackAutoMode "0"				// Automation: Toggle track between touch and trim/read modes
+	Shift+Trim GlobalAutoMode "0"		// Set all tracks to automation Trim mode
+	Project TrackAutoMode "2"			// Set track to automation Touch mode
+	Shift+Project GlobalAutoMode "2"	// Set all tracks to automation Touch mode
+	Mixer TrackAutoMode "4"				// Set track to automation Latch mode
+	Shift+Mixer GlobalAutoMode "4"		// Set all tracks to automation Latch mode
+	Motors Reaper "40078"				// View: Toggle mixer visible
+	Shift+Motors Reaper "40075"			// View: Toggle master track visible
+	Alt+Motors Reaper "41609"			// View: Toggle master track in separate/docked window
+	Control+Motors Reaper "41636"		// Mixer: Toggle master track in separate window
+	
+/	OTHER/UTILITIES
+/	--------------------------------------
+/	Control - is Control (set above)
+/	Alt - is Alt (set above)
+/	Shift - is Shift (set above)
+/	--------------------------------------
+	OtherLeft Reaper "41167"			// Item navigation: Move cursor left to nearest item edge
+	OtherRight Reaper "41168"			// Item navigation: Move cursor right to nearest item edge
+	OtherSolo Reaper "40340"			// Track: Unsolo all tracks
+	Shift+OtherSolo Reaper "40339"		// Track: Unmute all tracks
+	OtherLeftL2 Reaper "40172"			// Markers: Go to previous marker/project start
+	OtherRightL2 Reaper "40157"			// Markers: Insert marker at current position
+	Shift+OtherRightL2 Reaper "40613"	// Markers: Delete marker near cursor
+	Alt+OtherRightL2 Reaper "40171"		// Markers: Insert and/or edit marker at current position
+	OtherSoloL2 Reaper "40173"			// Markers: Go to next marker/project end
+	
+	
+/	TRANSPORT
+/	--------------------------------------------------
+	Rewind Rewind									// Rewind
+	Option+Rewind Rewind							// When using the OPTION key it will rewind 3X as far
+	Option+Rewind Rewind
+	Option+Rewind Rewind
+	Shift+Rewind Reaper "40523"						// Transport: Decrease playrate by ~6% (one semitone)
+	Loop CycleTimeline								// Toggle Repeat
+	FastForward FastForward							// Fast Forward
+	Option+FastForward FastForward					// When using the OPTION key it will FastForward 3X as far
+	Option+FastForward FastForward
+	Option+FastForward FastForward
+	Shift+FastForward Reaper "40522"				// Transport: Increase playrate by ~6% (one semitone)
+	Record Reaper "1013"							// Transport: Record
+	Option+Record Reaper "_BR_CYCLE_RECORD_MODES"	// SWS/BR: Options - Cycle through record modes
+	Play Play										// Play
+	Option+Play Reaper "_e9c3472cd28e5c46aff166b3b6d737b5" // Custom: Go to start of Project and Begin playing
+	Shift+Play Reaper "40521"						// Transport: Set playrate to 1.0
+	Stop Stop										// Stop
+	
+/	ZOOM COMANDS
+/	----------------------------------------------
+	Zoom Reaper "_XENAK_TOGGLETRACKHEIAB"		// Xenakios/SWS: Toggle selected tracks height A/B
+	Option+Zoom Reaper "_SWS_TOGZOOMTTHIDE"		// SWS: Toggle zoom to selected tracks and time selection, hide others
+	Shift+Zoom Reaper "40295"					// View: Zoom out project
+	
+	Up Reaper "40138"							// View: Scroll view up
+	Alt+Up Reaper "40286"						// Track: Go to previous track
+	Shift+Up Reaper "40288"						// Track: Go to previous track (leaving other tracks selected)
+	Control+Up Reaper "_XENAKIOS_TVPAGEUP"		// Xenakios/SWS: Scroll track view up (page)
+	Option+Up Reaper "40111"					// View: Zoom in vertical
+	Option+Up Reaper "40111"					// Double Zoom In with one press
+	Option+Up Reaper "40111"					// Tripple Zoom In with one press
+	Control+Alt+Up Reaper "_ecd8ac0380966e4bb757dd7c2930056e" // Custom: Toggle Folder Collapse State
+	
+	Down Reaper "40139"							// View: Scroll view down
+	Alt+Down Reaper "40285"						// Track: Go to next track
+	Shift+Down Reaper "40287"					// Track: Go to next track (leaving other tracks selected)
+	Control+Down Reaper "_XENAKIOS_TVPAGEDOWN"	// Xenakios/SWS: Scroll track view down (page)
+	Option+Down Reaper "40112"					// View: Zoom out vertical
+	Option+Down Reaper "40112"					// Double Zoom Down with one press
+	Option+Down Reaper "40112"					// Tripple Zoom Down with one press
+	Control+Alt+Down Reaper "_ecd8ac0380966e4bb757dd7c2930056e" // Custom: Toggle Folder Collapse State
+	
+	Left Reaper "40140"							// View: Scroll view left
+	Shift+Left Reaper "_1d8b99bede1ea2439085cdc69bebd84c"	// Custom: Go To Start Edit and Play
+	Alt+Left Reaper "41128"						// Item: Select previous adjacent non-overlapping item
+	Option+Left Reaper "1011"					// View: Zoom out horizontal
+	
+	Right Reaper "40141"						// View: Scroll view right
+	Shift+Right Reaper "_4ece038c26550d4daef392e96a43961a"	// Custom: Go To End Edit and Play (Copy)
+	Alt+Right Reaper "41127"					// Item: Select next adjacent non-overlapping item
+	Option+Right Reaper "1012"					// Zoom in horizontal
+ZoneEnd
+
+Zone SendsEngaged
+	OnTrackSelection Reaper "40293"	 // Track: View routing and I/O for current/last touched track To Refresh Windows when switching tracks
+	Send ToggleMapSelectedTrackSends // toggle back from SENDS mode to Normal Mode
+	Send Reaper "40293"				 // Track: View routing and I/O for current/last touched track in hopes of closing window
+	Send GoZone Home				 // Sending back to Home Zone to refresh names on display back to regular Tracks
+ZoneEnd
+
+/ ---------------------------------------------------------------------------------------------------
+/ Did not change much on the items below other than update the name of the modifiers to what I have
+/ Control = Control, Alt = Master, Option = Scrub
+/ ---------------------------------------------------------------------------------------------------
+/ ===========================================================================================================
+/ ZONE CHANNEL|
+/ ===========================================================================================================
+Zone "Channel|"
+	TrackNavigator
+	VUMeter|  TrackOutputMeterMaxPeakLR
+	/VUMeter|  TrackOutputMeterAverageLR
+	DisplayUpper|  TrackNameDisplay
+	DisplayLower|  TrackPanDisplay
+	TrackTouch+DisplayLower|  TrackVolumeDisplay
+	RotaryPush| GoZone PanWidth|
+	Rotary| TrackPan "0"
+	RecordArm|  TrackRecordArm
+	Solo|  TrackSolo
+	Mute| TrackMute
+	Select|  TrackUniqueSelect
+	Shift+Select|  TrackRangeSelect
+	Control+Select|  TrackSelect
+	Shift+Control+Select| TogglePin
+	Option+Select| TrackFolderDive
+     Alt+Select| TrackUniqueSelect
+     Alt+Select| Reaper "41665"
+	Fader|  TrackVolume
+	TrackTouch+Fader|  TrackVolume
+	FaderTouch|  TrackTouch
+ZoneEnd
+
+/ ===========================================================================================================
+/ ZONE PAN|1-8
+/ ===========================================================================================================
+Zone "Pan|1-8"
+	TrackNavigator
+	Rotary| TrackPan "0"
+	RotaryPush| GoZone PanWidth|
+ZoneEnd
+
+/ ===========================================================================================================
+/ ZONE PANWIDTH|1-8
+/ ===========================================================================================================
+Zone "PanWidth|1-8"
+	TrackNavigator
+	Rotary| TrackPanWidth "1"
+	RotaryPush| GoZone Pan|
+ZoneEnd
+
+/ ===========================================================================================================
+/ ZONE SEND|1-8
+/ ===========================================================================================================
+Zone "Send|1-8"
+      SelectedTrackNavigator
+      DisplayUpper| TrackSendNameDisplay
+      TrackTouch+DisplayUpper| TrackSendVolumeDisplay
+      Mute| TrackSendMute
+      Fader| TrackSendVolume
+      Rotary| TrackSendPan
+      RotaryPush| NoAction
+      TrackTouch+Fader| TrackSendVolume
+      FaderTouch| TrackTouch
+ZoneEnd
+
+
+/ ===========================================================================================================
+/ ZONE FXMENU|1-8
+/ ===========================================================================================================
+Zone "FXMenu|1-8"
+	SelectedTrackNavigator
+/	FocusedFXNavigator // Not using as I haven't figured it out
+	DisplayUpper| FXNameDisplay |
+	DisplayLower| FXParamNameDisplay |
+	Rotary| NoAction
+	RotaryPush| GoFXSlot |
+ZoneEnd
+
+/ ===========================================================================================================
+/ ZONE FOCUSEDFXPARAM
+/ ===========================================================================================================
+Zone "FocusedFXParam"
+      Fader1 FocusedFXParam
+      FaderTouch1 TrackTouch
+      DisplayUpper1 FocusedFXParamNameDisplay
+      DisplayLower1 FocusedFXParamValueDisplay
+      DisplayUpper2 NoAction
+      DisplayLower2 NoAction
+      DisplayUpper3 NoAction
+      DisplayLower3 NoAction
+      DisplayUpper4 NoAction
+      DisplayLower4 NoAction
+      DisplayUpper5 NoAction
+      DisplayLower5 NoAction
+      DisplayUpper6 NoAction
+      DisplayLower6 NoAction
+      DisplayUpper7 NoAction
+      DisplayLower7 NoAction
+      DisplayUpper8 NoAction
+      DisplayLower8 NoAction
+ZoneEnd

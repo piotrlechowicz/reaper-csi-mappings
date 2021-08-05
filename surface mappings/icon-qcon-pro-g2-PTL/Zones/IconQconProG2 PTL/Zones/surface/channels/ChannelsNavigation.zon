@@ -1,0 +1,13 @@
+Zone "ChannelsNavigation"
+    // navigation
+    ChannelLeft TrackBank "-1"	// Bank one track to the left
+    ChannelRight TrackBank "1"	// Bank one track to the right
+    BankLeft TrackBank "-8"		// Bank eight tracks to the left
+    BankRight TrackBank "8"		// Bank eight tracks to the right
+
+    // toggle action for selected tracks
+    Shift+BankLeft Reaper "6" 		// Toggle mute for selected tracks
+    Shift+ChannelRight Reaper "7" 	// Toggle solo for selected tracks
+    Shift+ChannelLeft Reaper "9" 	// Toggle rec for selected tracks
+    Shift+BankRight Reaper "40297" 	// Unselect all tracks
+ZoneEnd

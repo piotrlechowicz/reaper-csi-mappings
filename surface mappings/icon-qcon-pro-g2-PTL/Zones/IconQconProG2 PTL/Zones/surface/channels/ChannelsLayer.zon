@@ -1,0 +1,7 @@
+Zone "ChannelsLayer" // aka Pan mode
+  IncludedZones
+    "ChannelsNavigation"
+    "ChannelsFunctionKeys"
+    "MasterChannel"
+  IncludedZonesEnd
+ZoneEnd

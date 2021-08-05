@@ -1,0 +1,19 @@
+Zone "ProjectFunctionKeys"
+    Help GoZone "ProjectFunctionKeysHelp"
+    Control+Help GoZone "ProjectFunctionKeysHelp2"
+
+
+    F1 Reaper "40016" // Options: Preferences...
+    F2 Reaper "40099" // Audio device configuration...
+    F3 Reaper "_S&M_SHOW_NOTES_VIEW"        // SWS/S&M: Open/close Notes window
+    F4 Reaper "50124"   // Media explorer: Show/hide media explorer
+    F5 Reaper "40251"   // View: Show routing matrix window
+    F6 Reaper "40906"   // View: Show track manager window
+    F7 Reaper "40326"       // View: Show region/marker manager window
+    F8 Reaper "40605"   // Show action list
+
+    F1L2 Reaper "40001"   // Track: Insert new track
+    F2L2 Reaper "40702"   // Track: Insert new track at end of track list
+    F3L2 Reaper "_XENAKIOS_INSNEWTRACKTOP" // Xenakios/SWS: Insert new track at the top of track list
+    F4L2 Reaper "40062" // Track: Duplicate tracks
+ZoneEnd

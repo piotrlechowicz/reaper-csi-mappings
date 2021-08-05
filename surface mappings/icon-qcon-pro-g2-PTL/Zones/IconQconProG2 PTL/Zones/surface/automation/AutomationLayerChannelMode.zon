@@ -1,0 +1,21 @@
+Zone "AutomationLayerChannelMode"
+    SelectedTrackNavigator
+
+    /========== Navigation
+    Automation  Reaper "_ptl_surface_toggler_automation_toggle"
+    Automation  Reaper "_ptl_surface_toggler_automation_off"
+    Automation  GoZone "AutomationLayerGlobalMode"
+
+    Shift+Automation GoZone "AutomationFunctionKeys"
+    Property+Shift+Automation NoFeedback
+
+    /========== Implementation
+
+    Read 				TrackAutoMode "1" 	//Read
+    Touch 				TrackAutoMode "2" 	//Touch
+    Trim		        TrackAutoMode "0" 	//Trim
+
+	Shift+Read			TrackAutoMode "3" 	//Write
+	Shift+Touch			TrackAutoMode "4" 	//Latch
+    Shift+Trim          TrackAutoMode "5" 	//LatchPreview
+ZoneEnd

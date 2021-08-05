@@ -1,0 +1,228 @@
+Zone "VST3: TDR Nova (Tokyo Dawn Labs)" "TDR Eq"
+	SelectedTrackNavigator
+
+	Option+DisplayUpper1 FXNameDisplay
+	Option+DisplayLower2 TrackNameDisplay
+	Option+DisplayUpper3 FixedTextDisplay " / Opt+"
+	Option+DisplayUpper4 FixedTextDisplay "Rot On/"
+	Option+DisplayUpper5 FixedTextDisplay "Off    "
+
+	BankLeft 	  	Reaper "_S&M_PREVIOUS_SELFX_PRESET" // SWS/S&M: Trigger previous preset for selected FX of selected tracks
+	BankRight	  	Reaper "_S&M_NEXT_SELFX_PRESET"
+
+	DisplayUpper1 FXParamNameDisplay 50
+	DisplayLower1 FXParamValueDisplay 50
+	Rotary1 	  FXParam 50 "HP Frequency"
+	Shift+Rotary1 FXParam 50 "HP Freq" [ 0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0 ]
+	Fader1 NoAction
+	Rotary1 		FXParam 49 "HP 1 Active"[ 1 ] // auto on
+	Shift+Rotary1 	FXParam 49 "HP 1 Active" [ 1 ] // auto on
+	RecordArm1 	  	FXParam 49 "HP 1 Active"
+	Option+Rotary1	FXParam 49 "HP Active" [ 0 1 ]
+	Option+DisplayLower1 FXParamValueDisplay 49
+
+	DisplayUpper2 FixedTextDisplay "Freq1"
+	DisplayLower2 FXParamValueDisplay 4
+	Fader2Touch+DisplayUpper2 FixedTextDisplay "Gain1"
+	Fader2Touch+DisplayLower2 FXParamValueDisplay 2
+	Rotary2 	 	FXParam 4 "Eq Freq 1"
+	// Lin (22 samples)
+	Shift+Rotary2 FXParam 4 "Eq Freq 1" [ 0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0 ]
+	Fader2 			FXParam 2 "Eq Gain 1"
+	Rotary2 		FXParam 1 "Band 1 Active"[ 1 ] // auto on
+	Shift+Rotary2 	FXParam 1 "Band 1 Active" [ 1 ] // auto on
+	RecordArm2 	  	FXParam 1 "Band 1 Active"
+	Option+Rotary2	FXParam 1 "Band 1 Active" [ 0 1 ]
+	Option+DisplayLower2 FXParamValueDisplay 1
+
+	DisplayUpper3 FixedTextDisplay "Freq2"
+	DisplayLower3 FXParamValueDisplay 16
+	Fader3Touch+DisplayUpper3 FixedTextDisplay "Gain2"
+	Fader3Touch+DisplayLower3 FXParamValueDisplay 14
+	Rotary3 	 	FXParam 16 "Eq Freq 2"
+	Shift+Rotary3 FXParam 16 "Eq Freq 2" [ 0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0 ]
+	Fader3 			FXParam 14 "Eq Gain 2"
+	Rotary3 		FXParam 13 "Band 2 Active"[ 1 ] // auto on
+	Shift+Rotary3 	FXParam 13 "Band 2 Active" [ 1 ] // auto on
+	RecordArm3 	  	FXParam 13 "Band 2 Active"
+	Option+Rotary3	FXParam 13 "Band 2 Active" [ 0 1 ]
+	Option+DisplayLower3 FXParamValueDisplay 13
+
+	DisplayUpper4 FixedTextDisplay "Freq3"
+	DisplayLower4 FXParamValueDisplay 28
+	Fader4Touch+DisplayUpper4 FixedTextDisplay "Gain3"
+	Fader4Touch+DisplayLower4 FXParamValueDisplay 26
+	Rotary4 	 	FXParam 28 "Eq Freq 3"
+	Shift+Rotary4 FXParam 28 "Eq Freq 3" [ 0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0 ]
+	Fader4 			FXParam 26 "Eq Gain 3"
+	Rotary4 		FXParam 25 "Band 3 Active"[ 1 ] // auto on
+	Shift+Rotary4 	FXParam 25 "Band 3 Active" [ 1 ] // auto on
+	RecordArm4 	  	FXParam 25 "Band 3 Active"
+	Option+Rotary4	FXParam 25 "Band 3 Active" [ 0 1 ]
+	Option+DisplayLower4 FXParamValueDisplay 25
+
+	DisplayUpper5 FixedTextDisplay "Freq4"
+	DisplayLower5 FXParamValueDisplay 40
+	Fader5Touch+DisplayUpper5 FixedTextDisplay "Gain4"
+	Fader5Touch+DisplayLower5 FXParamValueDisplay 38
+	Rotary5 	 	FXParam 40 "Eq Freq 4"
+	Shift+Rotary5 FXParam 40 "Eq Freq 4" [ 0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0 ]
+	Fader5 			FXParam 38 "Eq Gain 4"
+	Rotary5 		FXParam 37 "Band 4 Active"[ 1 ] // auto on
+	Shift+Rotary5 	FXParam 37 "Band 4 Active" [ 1 ] // auto on
+	RecordArm5 	  	FXParam 37 "Band 4 Active"
+	Option+Rotary5	FXParam 37 "Band 4 Active" [ 0 1 ]
+	Option+DisplayLower5 FXParamValueDisplay 37
+
+	DisplayUpper6 FXParamNameDisplay 54
+	DisplayLower6 FXParamValueDisplay 54
+	Rotary6 	  FXParam 54 "LP Frequency"
+	Shift+Rotary6 FXParam 54 "LP Freq" [ 0 0.05 0.1 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5 0.55 0.6 0.65 0.7 0.75 0.8 0.85 0.9 0.95 1.0 ]
+	Fader6 NoAction
+	Rotary6 		FXParam 53 "LP 1 Active"[ 1 ] // auto on
+	Shift+Rotary6 	FXParam 53 "LP 1 Active" [ 1 ] // auto on
+	RecordArm6 	  	FXParam 53 "LP 1 Active"
+	Option+Rotary6	FXParam 53 "LP Active" [ 0 1 ]
+	Option+DisplayLower6 FXParamValueDisplay 53
+
+	DisplayUpper7 FXParamNameDisplay 66
+	DisplayLower7 FXParamValueDisplay 66
+	Rotary7 FXParam 66 "EQ Auto Gain" [ 0 1 ]
+	Fader7 NoAction
+	RecordArm7 NoAction
+
+	DisplayUpper8 FXParamNameDisplay 65
+	DisplayLower8 FXParamValueDisplay 65
+	Rotary8 NoAction
+	Fader8 FXParam 65 "Output Gain"
+	RecordArm8 NoAction
+
+	Alt+DisplayUpper7 FXParamNameDisplay 64
+	Alt+DisplayLower7 FXParamValueDisplay 64
+	Alt+Rotary7 NoAction
+	Alt+Fader7 FXParam 64 "Dry Mix"
+	Alt+RecordArm7 NoAction
+
+	Alt+DisplayUpper8 FixedTextDisplay "Bypass"
+	Alt+DisplayLower8 FXParamValueDisplay 62
+	Alt+Rotary8 FXParam 62 "Master bypass" [ 0 1 ]
+	Alt+Fader8 NoAction
+	Alt+RecordArm8 NoAction
+
+
+	/ Q and shape
+
+	Control+DisplayUpper2 FixedTextDisplay "Type1"
+	Control+DisplayLower2 FXParamValueDisplay 5
+	Control+Fader2Touch+DisplayUpper2 FixedTextDisplay "Q1"
+	Control+Fader2Touch+DisplayLower2 FXParamValueDisplay 3
+	Control+Rotary2 FXParam 5 "Eq Shape 1" [ 0 0.5 1.0 ]
+	Control+Fader2 FXParam 3 "Eq Q 1"
+
+	Control+DisplayUpper3 FixedTextDisplay "Type2"
+	Control+DisplayLower3 FXParamValueDisplay 17
+	Control+Fader3Touch+DisplayUpper3 FixedTextDisplay "Q2"
+	Control+Fader3Touch+DisplayLower3 FXParamValueDisplay 15
+	Control+Rotary3 FXParam 17 "Eq Shape 2" [ 0 0.5 1.0 ]
+	Control+Fader3 FXParam 15 "Eq Q 2"
+
+	Control+DisplayUpper4 FixedTextDisplay "Type3"
+	Control+DisplayLower4 FXParamValueDisplay 29
+	Control+Fader4Touch+DisplayUpper4 FixedTextDisplay "Q3"
+	Control+Fader4Touch+DisplayLower4 FXParamValueDisplay 27
+	Control+Rotary4 FXParam 29 "Eq Shape 3" [ 0 0.5 1.0 ]
+	Control+Fader4 FXParam 27 "Eq Q 3"
+
+	Control+DisplayUpper5 FixedTextDisplay "Type4"
+	Control+DisplayLower5 FXParamValueDisplay 41
+	Control+Fader5Touch+DisplayUpper5 FixedTextDisplay "Q4"
+	Control+Fader5Touch+DisplayLower5 FXParamValueDisplay 39
+	Control+Rotary5 FXParam 41 "Eq Shape 4" [ 0 0.5 1.0 ]
+	Control+Fader5 FXParam 39 "Eq Q 4"
+
+	Control+DisplayUpper1 FXParamNameDisplay 51
+	Control+DisplayLower1 FXParamValueDisplay 51
+	Control+Rotary1 FXParam 51 "HP Type" [ 0 0.3 0.6 1.0 ]
+
+	Control+DisplayUpper6 FXParamNameDisplay 55
+	Control+DisplayLower6 FXParamValueDisplay 55
+	Control+Rotary6 FXParam 55 "LP Type" [ 0 0.3 0.6 1.0 ]
+
+	/ FXParam 0 "Band 1 selected"
+	/ FXParam 1 "Band 1 Active"
+	/ FXParam 2 "Band 1 Gain"
+	/ FXParam 3 "Band 1 Q"
+	/ FXParam 4 "Band 1 Frequency"
+	/ FXParam 5 "Band 1 Type"
+	/ FXParam 6 "Band 1 Dyn"
+	/ FXParam 7 "Band 1 Threshold"
+	/ FXParam 8 "Band 1 Ratio"
+	/ FXParam 9 "Band 1 Split"
+	/ FXParam 10 "Band 1 Attack"
+	/ FXParam 11 "Band 1 Release"
+	/ FXParam 12 "Band 2 selected"
+	/ FXParam 13 "Band 2 Active"
+	/ FXParam 14 "Band 2 Gain"
+	/ FXParam 15 "Band 2 Q"
+	/ FXParam 16 "Band 2 Frequency"
+	/ FXParam 17 "Band 2 Type"
+	/ FXParam 18 "Band 2 Dyn"
+	/ FXParam 19 "Band 2 Threshold"
+	/ FXParam 20 "Band 2 Ratio"
+	/ FXParam 21 "Band 2 Split"
+	/ FXParam 22 "Band 2 Attack"
+	/ FXParam 23 "Band 2 Release"
+	/ FXParam 24 "Band 3 selected"
+	/ FXParam 25 "Band 3 Active"
+	/ FXParam 26 "Band 3 Gain"
+	/ FXParam 27 "Band 3 Q"
+	/ FXParam 28 "Band 3 Frequency"
+	/ FXParam 29 "Band 3 Type"
+	/ FXParam 30 "Band 3 Dyn"
+	/ FXParam 31 "Band 3 Threshold"
+	/ FXParam 32 "Band 3 Ratio"
+	/ FXParam 33 "Band 3 Split"
+	/ FXParam 34 "Band 3 Attack"
+	/ FXParam 35 "Band 3 Release"
+	/ FXParam 36 "Band 4 selected"
+	/ FXParam 37 "Band 4 Active"
+	/ FXParam 38 "Band 4 Gain"
+	/ FXParam 39 "Band 4 Q"
+	/ FXParam 40 "Band 4 Frequency"
+	/ FXParam 41 "Band 4 Type"
+	/ FXParam 42 "Band 4 Dyn"
+	/ FXParam 43 "Band 4 Threshold"
+	/ FXParam 44 "Band 4 Ratio"
+	/ FXParam 45 "Band 4 Split"
+	/ FXParam 46 "Band 4 Attack"
+	/ FXParam 47 "Band 4 Release"
+	/ FXParam 48 "HP Selected"
+	/ FXParam 49 "HP Active"
+	/ FXParam 50 "HP Frequency"
+	/ FXParam 51 "HP Type"
+	/ FXParam 52 "LP Selected"
+	/ FXParam 53 "LP Active"
+	/ FXParam 54 "LP Frequency"
+	/ FXParam 55 "LP Type"
+	/ FXParam 56 "Wide Band Gain"
+	/ FXParam 57 "Wide Band Dyn"
+	/ FXParam 58 "Wide Band Threshold"
+	/ FXParam 59 "Wide Band Ratio"
+	/ FXParam 60 "Wide Band Attack"
+	/ FXParam 61 "Wide Band Release"
+	/ FXParam 62 "Master bypass"
+	/ FXParam 63 "Dynamic delta"
+	/ FXParam 64 "Dry Mix"
+	/ FXParam 65 "Output Gain"
+	/ FXParam 66 "EQ Auto Gain"
+	/ FXParam 67 "Quality"
+	/ FXParam 68 "Channels"
+	/ FXParam 69 "Analyzer Mode"
+	/ FXParam 70 "Display EQ Range"
+	/ FXParam 71 "Display FFT Floor"
+	/ FXParam 72 "Sidechain Mode"
+	/ FXParam 73 "Analyzer Speed"
+	/ FXParam 74 "Program"
+	/ FXParam 75 "Bypass"
+	/ FXParam 76 "Wet"
+ZoneEnd

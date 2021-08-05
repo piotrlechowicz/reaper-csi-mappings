@@ -1,0 +1,6 @@
+Zone "FxLayer"
+    IncludedZones
+        "FxMenuNavigationZone"
+        "FxFunctionKeys"
+    IncludedZonesEnd
+ZoneEnd

@@ -1,0 +1,811 @@
+/ ==========================================
+/ MST file for QCon Pro G2 by Luis
+/ ==========================================
+/ I've placed the buttons located on the right of the controller at the top of this list because I believe those are the ones
+/ that will get the most customization. I'm also not labeling the buttons with the iCon provided INSERT for REAPER because I
+/ just hate having that on my controller. So I'm labeling the buttons as they are lable with the white paint on the controller.
+/ At the bottom of the list you will see the Display, Encoder (rotary dials) and the Individual Track Buttons and Fader Commands
+/ Widgets.
+/ v0.003 (match version to ZONE file version)
+/ A big thanks to all those helping with the CSI Project at the Reaper Forum: https://forum.cockos.com/showthread.php?t=183143
+
+/ ==============================================================================================================================
+/ TRACK/FADER CONTROLS - These let you bank faders to tracks on the left & right and flip the encoder to faders and vise versa
+/ ============================================================================================================================== 
+Widget Flip
+	Press 90 32 7f
+	FB_TwoState 90 32 7f 90 32 00
+WidgetEnd
+
+Widget ChannelLeft
+	Press 90 30 7f
+WidgetEnd
+
+Widget ChannelRight
+	Press 90 31 7f
+WidgetEnd
+
+Widget BankLeft
+	Press 90 2E 7f
+WidgetEnd
+
+Widget BankRight
+	Press 90 2F 7f
+WidgetEnd
+
+/ ======================================
+/ NAME/VALUE - 
+/ ======================================
+Widget nameValue
+	Press 90 34 7f
+    FB_TwoState 90 34 7f 90 34 00
+WidgetEnd
+
+Widget smpteBeats
+	Press 90 35 7f
+WidgetEnd
+
+/ ==============================================
+/ DAW MODE/UTILITIES
+/ ==============================================
+Widget Undo // used to be Shift
+	Press 90 46 7f 90 46 00
+WidgetEnd
+
+Widget Redo // used to be Option
+	Press 90 47 7f 90 47 00
+WidgetEnd
+
+Widget Save // used to be Control
+	Press 90 48 7f 90 48 00
+WidgetEnd
+
+/ ===================================================================
+/ FUNCTIONS - function butons from F1-F8. These have 2 layer states
+/ ===================================================================
+Widget F1
+	Press 90 36 7f
+WidgetEnd
+
+Widget F2
+	Press 90 37 7f
+WidgetEnd
+
+Widget F3
+	Press 90 38 7f
+WidgetEnd
+
+Widget F4
+	Press 90 39 7f
+WidgetEnd
+
+Widget F5
+	Press 90 3a 7f
+WidgetEnd
+
+Widget F6
+	Press 90 3b 7f
+WidgetEnd
+
+Widget F7
+	Press 90 3c 7f
+WidgetEnd
+
+Widget F8
+	Press 90 3d 7f
+WidgetEnd
+
+Widget F1L2
+	Press 90 3e 7f
+WidgetEnd
+
+Widget F2L2
+	Press 90 3f 7f
+WidgetEnd
+
+Widget F3L2
+	Press 90 40 7f
+WidgetEnd
+
+Widget F4L2
+	Press 90 41 7f
+WidgetEnd
+
+Widget F5L2
+	Press 90 42 7f
+WidgetEnd
+
+Widget F6L2
+	Press 90 43 7f
+WidgetEnd
+
+Widget F7L2
+	Press 90 44 7f
+WidgetEnd
+
+Widget F8L2
+	Press 90 45 7f
+WidgetEnd
+
+/ ==============================================
+/ ASSIGNMENTS - 
+/ ==============================================
+
+Widget PageUp // used to be Blank1
+	Press 90 28 7f
+	FB_TwoState 90 28 7f 90 28 00
+WidgetEnd
+
+Widget Send	// used to be SEND
+	Press 90 29 7f 
+	// FB_TwoState 90 29 7f 90 29 00
+WidgetEnd
+
+Widget Pan
+	Press 90 2a 7f
+	// FB_TwoState 90 2a 7f 90 2a 00
+WidgetEnd
+
+Widget Inserts // used to be Plugin
+	Press 90 2b 7f
+	// FB_TwoState 90 2b 7f 90 2b 00
+WidgetEnd
+
+Widget EQ
+	Press 90 2c 7f
+	// FB_TwoState 90 2c 7f 90 2c 00
+WidgetEnd
+
+Widget FXSend // used to be Blank2
+	Press 90 2d 7f
+WidgetEnd
+
+/ ========================================================================
+/ AUTOMATION - this has read/write/ but also /sends/project/Mixer/Motors
+/ ========================================================================
+
+Widget Read
+	Press 90 4a 7f 90 4a 00
+	FB_TwoState 90 4a 7f 90 4a 00
+WidgetEnd
+
+Widget Write
+	Press 90 4b 7f 90 4b 00
+	FB_TwoState 90 4b 7f 90 4b 00
+WidgetEnd
+
+Widget Trim // used to be Trim
+	Press 90 4c 7f 90 4c 00
+	FB_TwoState 90 4c 7f 90 4c 00
+WidgetEnd
+
+Widget Project // used to be named Touch
+	Press 90 4d 7f 90 4d 00
+	FB_TwoState 90 4d 7f 90 4d 00
+WidgetEnd
+
+Widget Mixer // used to be named Latch
+	Press 90 4e 7f 90 4e 00
+	FB_TwoState 90 4e 7f 90 4e 00
+WidgetEnd
+
+Widget Motors // used to be named Blank3
+	Press 90 4f 7f 90 4f 00
+	FB_TwoState 90 4f 7f 90 4f 00
+WidgetEnd
+
+/ ==========================================================================
+/ OTHER/UTILITIES
+/ ==========================================================================
+
+Widget Control // used to be named Save - will now be Control
+	Press 90 50 7f 90 50 00
+WidgetEnd
+
+Widget Alt // used to be named Undo - will now be Alt/Option
+	Press 90 51 7f 90 51 00
+WidgetEnd
+
+Widget Shift // used to be named Blank5 - will remain as Shift
+	Press 90 53 7f 90 53 00
+WidgetEnd
+
+Widget OtherLeft // used to be named Marker
+	Press 90 54 7f 90 54 00
+	// FB_TwoState 90 54 7f 90 54 00
+WidgetEnd
+
+Widget OtherLeftL2 // used to be named Marker
+	Press 90 58 7f
+	// FB_TwoState 90 58 7f 90 58 00
+WidgetEnd
+
+Widget OtherRight // used to be named Normal
+	Press 90 55 7f
+	// FB_TwoState 90 55 7f 90 55 00
+WidgetEnd
+
+Widget OtherRightL2 // used to be named Normal
+	Press 90 59 7f
+	// FB_TwoState 90 59 7f 90 59 00
+WidgetEnd
+
+Widget OtherSolo // used to be named Blank4
+	Press 90 52 7f
+	// FB_TwoState 90 52 7f 90 52 00
+WidgetEnd
+
+Widget OtherSoloL2 // used to be named Blank4
+	Press 90 5a 7f
+	// FB_TwoState 90 5a 7f 90 5a 00
+WidgetEnd
+
+/ ===========================================================
+/ TRANSPORT
+/ ===========================================================
+
+Widget Rewind
+	Press 90 5b 7f
+	FB_TwoState 90 5b 7f 90 5b 00
+WidgetEnd
+
+Widget Loop
+	Press 90 56 7f
+	FB_TwoState 90 56 7f 90 56 00
+WidgetEnd
+
+Widget FastForward
+	Press 90 5c 7f
+	FB_TwoState 90 5c 7f 90 5c 00
+WidgetEnd
+
+Widget Record
+	Press 90 5f 7f
+	FB_TwoState 90 5f 7f 90 5f 00
+WidgetEnd
+
+Widget Play
+	Press 90 5e 7f
+	FB_TwoState 90 5e 7f 90 5e 00
+WidgetEnd
+
+Widget Stop
+	Press 90 5d 7f
+	FB_TwoState 90 5d 7f 90 5d 00
+WidgetEnd
+
+/ =====================================================
+/ ZOOM COMMANDS & SCRUB
+/ =====================================================
+Widget Up
+	Press 90 60 7f
+WidgetEnd
+
+Widget Left
+	Press 90 62 7f
+WidgetEnd
+
+Widget Zoom
+	Press 90 64 7f
+	FB_TwoState 90 64 7f 90 64 00
+WidgetEnd
+
+Widget Right
+	Press 90 63 7f
+WidgetEnd
+
+Widget Down
+	Press 90 61 7f
+WidgetEnd
+
+Widget Option
+	Press 90 65 7f 90 65 00
+	// FB_TwoState 90 65 7f 90 65 00
+WidgetEnd
+
+
+/ ===========================================================================================
+/ JOG WHEEL - Developed a hack as JogWheel has 8 outputs depending on speed as per Cragster
+/ ===========================================================================================
+Widget JogWheelRotaryCW
+	Press b0 3c 01
+WidgetEnd
+
+Widget JogWheelRotaryCW2
+     Press b0 3c 02
+WidgetEnd
+
+Widget JogWheelRotaryCW3
+     Press b0 3c 03
+WidgetEnd
+
+Widget JogWheelRotaryCW4
+     Press b0 3c 04
+WidgetEnd
+
+Widget JogWheelRotaryCW5
+     Press b0 3c 05
+WidgetEnd
+
+Widget JogWheelRotaryCW6
+     Press b0 3c 06
+WidgetEnd
+
+Widget JogWheelRotaryCW7
+     Press b0 3c 07
+WidgetEnd
+
+Widget JogWheelRotaryCW8
+     Press b0 3c 08
+WidgetEnd
+
+Widget JogWheelRotaryCCW
+     Press b0 3c 41
+WidgetEnd
+
+Widget JogWheelRotaryCCW2
+     Press b0 3c 42
+WidgetEnd
+
+Widget JogWheelRotaryCCW3
+     Press b0 3c 43
+WidgetEnd
+
+Widget JogWheelRotaryCCW4
+     Press b0 3c 44
+WidgetEnd
+
+Widget JogWheelRotaryCCW5
+     Press b0 3c 45
+WidgetEnd
+
+Widget JogWheelRotaryCCW6
+     Press b0 3c 46
+WidgetEnd
+
+Widget JogWheelRotaryCCW7
+     Press b0 3c 47
+WidgetEnd
+
+Widget JogWheelRotaryCCW8
+     Press b0 3c 48
+WidgetEnd
+
+/ ===============================================================
+/ DISPLAY - Display Upper & Lower from Track 1-8 & Time display
+/ ===============================================================
+Widget DisplayUpper1
+	FB_MCUDisplayUpper 0
+WidgetEnd
+
+Widget DisplayUpper2
+	FB_MCUDisplayUpper 1
+WidgetEnd
+
+Widget DisplayUpper3
+	FB_MCUDisplayUpper 2
+WidgetEnd
+
+Widget DisplayUpper4
+	FB_MCUDisplayUpper 3
+WidgetEnd
+
+Widget DisplayUpper5
+	FB_MCUDisplayUpper 4
+WidgetEnd
+
+Widget DisplayUpper6
+	FB_MCUDisplayUpper 5
+WidgetEnd
+
+Widget DisplayUpper7
+	FB_MCUDisplayUpper 6
+WidgetEnd
+
+Widget DisplayUpper8
+	FB_MCUDisplayUpper 7
+WidgetEnd
+
+Widget DisplayLower1
+	FB_MCUDisplayLower 0
+WidgetEnd
+
+Widget DisplayLower2
+	FB_MCUDisplayLower 1
+WidgetEnd
+
+Widget DisplayLower3
+	FB_MCUDisplayLower 2
+WidgetEnd
+
+Widget DisplayLower4
+	FB_MCUDisplayLower 3
+WidgetEnd
+
+Widget DisplayLower5
+	FB_MCUDisplayLower 4
+WidgetEnd
+
+Widget DisplayLower6
+	FB_MCUDisplayLower 5
+WidgetEnd
+
+Widget DisplayLower7
+	FB_MCUDisplayLower 6
+WidgetEnd
+
+Widget DisplayLower8
+	FB_MCUDisplayLower 7
+WidgetEnd
+
+Widget TimeDisplay
+	FB_MCUTimeDisplay
+WidgetEnd
+
+/ =======================================================
+/ ENCODERS - Rotaty knob and Rotary Push from Track 1-8
+/ =======================================================
+Widget RotaryPush1
+	Press 90 20 7f
+WidgetEnd
+
+Widget RotaryPush2
+	Press 90 21 7f
+WidgetEnd
+
+Widget RotaryPush3
+	Press 90 22 7f
+WidgetEnd
+
+Widget RotaryPush4
+	Press 90 23 7f
+WidgetEnd
+
+Widget RotaryPush5
+	Press 90 24 7f
+WidgetEnd
+
+Widget RotaryPush6
+	Press 90 25 7f
+WidgetEnd
+
+Widget RotaryPush7
+	Press 90 26 7f
+WidgetEnd
+
+Widget RotaryPush8
+	Press 90 27 7f
+WidgetEnd
+
+Widget Rotary1
+	Encoder b0 10 7f
+	FB_Encoder b0 10 7f
+WidgetEnd
+
+Widget Rotary2
+	Encoder b0 11 7f
+	FB_Encoder b0 11 7f
+WidgetEnd
+
+Widget Rotary3
+	Encoder b0 12 7f
+	FB_Encoder b0 12 7f
+WidgetEnd
+
+Widget Rotary4
+	Encoder b0 13 7f
+	FB_Encoder b0 13 7f
+WidgetEnd
+
+Widget Rotary5
+	Encoder b0 14 7f
+	FB_Encoder b0 14 7f
+WidgetEnd
+
+Widget Rotary6
+	Encoder b0 15 7f
+	FB_Encoder b0 15 7f
+WidgetEnd
+
+Widget Rotary7
+	Encoder b0 16 7f
+	FB_Encoder b0 16 7f
+WidgetEnd
+
+Widget Rotary8
+	Encoder b0 17 7f
+	FB_Encoder b0 17 7f
+WidgetEnd
+
+/ ====================================================
+/ TRACK BUTTONS Rec, Solo, Mute, Sel from Track 1-8
+/ ====================================================
+Widget RecordArm1
+	Press 90 00 7f
+	FB_TwoState 90 00 7f 90 00 00
+WidgetEnd
+
+Widget RecordArm2
+	Press 90 01 7f
+	FB_TwoState 90 01 7f 90 01 00
+WidgetEnd
+
+Widget RecordArm3
+	Press 90 02 7f
+	FB_TwoState 90 02 7f 90 02 00
+WidgetEnd
+
+Widget RecordArm4
+	Press 90 03 7f
+	FB_TwoState 90 03 7f 90 03 00
+WidgetEnd
+
+Widget RecordArm5
+	Press 90 04 7f
+	FB_TwoState 90 04 7f 90 04 00
+WidgetEnd
+
+Widget RecordArm6
+	Press 90 05 7f
+	FB_TwoState 90 05 7f 90 05 00
+WidgetEnd
+
+Widget RecordArm7
+	Press 90 06 7f
+	FB_TwoState 90 06 7f 90 06 00
+WidgetEnd
+
+Widget RecordArm8
+	Press 90 07 7f
+	FB_TwoState 90 07 7f 90 07 00
+WidgetEnd
+
+Widget Solo1
+	Press 90 08 7f
+	FB_TwoState 90 08 7f 90 08 00
+WidgetEnd
+
+Widget Solo2
+	Press 90 09 7f
+	FB_TwoState 90 09 7f 90 09 00
+WidgetEnd
+
+Widget Solo3
+	Press 90 0a 7f
+	FB_TwoState 90 0a 7f 90 0a 00
+WidgetEnd
+
+Widget Solo4
+	Press 90 0b 7f
+	FB_TwoState 90 0b 7f 90 0b 00
+WidgetEnd
+
+Widget Solo5
+	Press 90 0c 7f
+	FB_TwoState 90 0c 7f 90 0c 00
+WidgetEnd
+
+Widget Solo6
+	Press 90 0d 7f
+	FB_TwoState 90 0d 7f 90 0d 00
+WidgetEnd
+
+Widget Solo7
+	Press 90 0e 7f
+	FB_TwoState 90 0e 7f 90 0e 00
+WidgetEnd
+
+Widget Solo8
+	Press 90 0f 7f
+	FB_TwoState 90 0f 7f 90 0f 00
+WidgetEnd
+
+Widget Mute1
+	Press 90 10 7f
+	FB_TwoState 90 10 7f 90 10 00
+WidgetEnd
+
+Widget Mute2
+	Press 90 11 7f
+	FB_TwoState 90 11 7f 90 11 00
+WidgetEnd
+
+Widget Mute3
+	Press 90 12 7f
+	FB_TwoState 90 12 7f 90 12 00
+WidgetEnd
+
+Widget Mute4
+	Press 90 13 7f
+	FB_TwoState 90 13 7f 90 13 00
+WidgetEnd
+
+Widget Mute5
+	Press 90 14 7f
+	FB_TwoState 90 14 7f 90 14 00
+WidgetEnd
+
+Widget Mute6
+	Press 90 15 7f
+	FB_TwoState 90 15 7f 90 15 00
+WidgetEnd
+
+Widget Mute7
+	Press 90 16 7f
+	FB_TwoState 90 16 7f 90 16 00
+WidgetEnd
+
+Widget Mute8
+	Press 90 17 7f
+	FB_TwoState 90 17 7f 90 17 00
+WidgetEnd
+
+Widget Select1
+	Press 90 18 7f
+	FB_TwoState 90 18 7f 90 18 00
+WidgetEnd
+
+Widget Select2
+	Press 90 19 7f
+	FB_TwoState 90 19 7f 90 19 00
+WidgetEnd
+
+Widget Select3
+	Press 90 1a 7f
+	FB_TwoState 90 1a 7f 90 1a 00
+WidgetEnd
+
+Widget Select4
+	Press 90 1b 7f
+	FB_TwoState 90 1b 7f 90 1b 00
+WidgetEnd
+
+Widget Select5
+	Press 90 1c 7f
+	FB_TwoState 90 1c 7f 90 1c 00
+WidgetEnd
+
+Widget Select6
+	Press 90 1d 7f
+	FB_TwoState 90 1d 7f 90 1d 00
+WidgetEnd
+
+Widget Select7
+	Press 90 1e 7f
+	FB_TwoState 90 1e 7f 90 1e 00
+WidgetEnd
+
+Widget Select8
+	Press 90 1f 7f
+	FB_TwoState 90 1f 7f 90 1f 00
+WidgetEnd
+
+/ ===============================================
+/ FADERS - Faders & Fader Touch from Track 1-8
+/ ===============================================
+Widget Fader1
+	Fader14Bit e0 7f 7f
+	FB_Fader14Bit e0 7f 7f
+WidgetEnd
+
+Widget Fader2
+	Fader14Bit e1 7f 7f
+	FB_Fader14Bit e1 7f 7f
+WidgetEnd
+
+Widget Fader3
+	Fader14Bit e2 7f 7f
+	FB_Fader14Bit e2 7f 7f
+WidgetEnd
+
+Widget Fader4
+	Fader14Bit e3 7f 7f
+	FB_Fader14Bit e3 7f 7f
+WidgetEnd
+
+Widget Fader5
+	Fader14Bit e4 7f 7f
+	FB_Fader14Bit e4 7f 7f
+WidgetEnd
+
+Widget Fader6
+	Fader14Bit e5 7f 7f
+	FB_Fader14Bit e5 7f 7f
+WidgetEnd
+
+Widget Fader7
+	Fader14Bit e6 7f 7f
+	FB_Fader14Bit e6 7f 7f
+WidgetEnd
+
+Widget Fader8
+	Fader14Bit e7 7f 7f
+	FB_Fader14Bit e7 7f 7f
+WidgetEnd
+
+Widget FaderTouch1
+	Press 90 68 7f 90 68 00
+WidgetEnd
+
+Widget FaderTouch2
+	Press 90 69 7f 90 69 00
+WidgetEnd
+
+Widget FaderTouch3
+	Press 90 6a 7f 90 6a 00
+WidgetEnd
+
+Widget FaderTouch4
+	Press 90 6b 7f 90 6b 00
+WidgetEnd
+
+Widget FaderTouch5
+	Press 90 6c 7f 90 6c 00
+WidgetEnd
+
+Widget FaderTouch6
+	Press 90 6d 7f 90 6d 00
+WidgetEnd
+
+Widget FaderTouch7
+	Press 90 6e 7f 90 6e 00
+WidgetEnd
+
+Widget FaderTouch8
+	Press 90 6f 7f 90 6f 00
+WidgetEnd
+
+/ ==========================================================
+/ FADER VU METER - VU Meters next to Faders from Track 1-8
+/ ==========================================================
+Widget VUMeter1
+	FB_MCUVUMeter 0
+WidgetEnd
+
+Widget VUMeter2
+	FB_MCUVUMeter 1
+WidgetEnd
+
+Widget VUMeter3
+	FB_MCUVUMeter 2
+WidgetEnd
+
+Widget VUMeter4
+	FB_MCUVUMeter 3
+WidgetEnd
+
+Widget VUMeter5
+	FB_MCUVUMeter 4
+WidgetEnd
+
+Widget VUMeter6
+	FB_MCUVUMeter 5
+WidgetEnd
+
+Widget VUMeter7
+	FB_MCUVUMeter 6
+WidgetEnd
+
+Widget VUMeter8
+	FB_MCUVUMeter 7
+WidgetEnd
+
+/ ========================================
+/ MASTER FADER - All things Master Fader
+/ ========================================
+Widget MasterFader
+	Fader14Bit e8 7f 7f
+	FB_Fader14Bit e8 7f 7f
+WidgetEnd
+
+Widget MasterFaderTouch
+	Press 90 70 7f 90 70 00
+WidgetEnd
+
+/ Widget MasterChannelMeterLeft // Pro G2 does not have a VU Master Meter
+/	FB_QConProXMasterVUMeter 0
+/ WidgetEnd
+
+/ Widget MasterChannelMeterRight // Pro G2 does not have a VU Master Meter
+/       FB_QConProXMasterVUMeter 1
+/ WidgetEnd

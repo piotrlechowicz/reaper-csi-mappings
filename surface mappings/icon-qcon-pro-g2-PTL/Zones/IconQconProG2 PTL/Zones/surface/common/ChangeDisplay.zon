@@ -1,0 +1,6 @@
+Zone "ChangeDisplay"
+	TimeDisplay  TimeDisplay
+	SmpteBeats   CycleTimeDisplayModes		// cycles through the time display modes on the upper right red led
+
+  	//	NameValue button is defined in different sections as its used as an Option key
+ZoneEnd

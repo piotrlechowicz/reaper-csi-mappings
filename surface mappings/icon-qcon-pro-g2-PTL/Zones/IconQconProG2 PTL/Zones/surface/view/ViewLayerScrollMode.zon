@@ -1,0 +1,28 @@
+Zone "ViewLayerScrollMode"
+    /============ Navigation
+	Zoom Reaper "_ptl_surface_toggler_zoom_toggle"
+    Zoom Reaper "_ptl_surface_toggler_zoom_on"
+	Zoom GoZone "ViewLayerZoomMode"
+
+	/============ Implementation
+	Up             Reaper "40138"					// View: Scroll view up
+    Down           Reaper "40139"					// View: Scroll view down
+    Left           Reaper "40140"					// View: Scroll view left
+	Right          Reaper "40141"					// View: Scroll view right
+
+    Control+Up     Reaper "_XENAKIOS_TVPAGEUP"		// Xenakios/SWS: Scroll track view up (page)
+    Alt+Up         Reaper "40286"					// Track: Go to previous track
+	Shift+Up       Reaper "40288"					// Track: Go to previous track (leaving other tracks selected)
+
+    Control+Down   Reaper "_XENAKIOS_TVPAGEDOWN"	// Xenakios/SWS: Scroll track view down (page)
+	Alt+Down       Reaper "40285"					// Track: Go to next track
+	Shift+Down     Reaper "40287"					// Track: Go to next track (leaving other tracks selected)
+
+    /----- collapse/uncollapse
+    Alt+Left        Reaper "_SWS_FOLDSMALL"         // SWS: Set selected folder(s) small
+    Alt+Hold+Left   Reaper "_SWS_COLLAPSE"          // SWS: Set selected folder(s) collapsed
+    Alt+Right       Reaper "_SWS_UNCOLLAPSE"        // SWS: Set selected folder(s) uncollapsed
+    Shift+Left      Reaper "_SWS_FOLDSMALL"          // SWS: Set selected folder(s) small
+    Shift+Hold+Left Reaper "_SWS_COLLAPSE"          // SWS: Set selected folder(s) collapsed
+    Shift+Right     Reaper "_SWS_UNCOLLAPSE"        // SWS: Set selected folder(s) uncollapsed
+ZoneEnd

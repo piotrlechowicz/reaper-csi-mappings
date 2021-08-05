@@ -1,0 +1,23 @@
+Zone "Channel"
+    TrackNavigator
+
+    VUMeter|           TrackOutputMeterMaxPeakLR
+
+	DisplayUpper|              TrackNameDisplay
+	DisplayLower|              MCUTrackPanDisplay Rotary|
+    Fader|Touch+DisplayLower|  TrackVolumeDisplay
+
+    Rotary|        MCUTrackPan
+    RecordArm|     TrackRecordArm
+	Solo|          TrackSolo
+	Mute|          TrackMute
+
+	Select|                    TrackUniqueSelect
+	Shift+Select|              TrackRangeSelect
+	Control+Select|            TrackSelect
+    Shift+Control+Select|      TogglePin
+    Fader|                     TrackVolume
+
+    Option+DisplayUpper|    MCUTrackPanDisplay Rotary|
+    Option+DisplayLower|    TrackVolumeDisplay
+ZoneEnd

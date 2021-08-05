@@ -1,0 +1,11 @@
+Zone "ReceivesFunctionKeysHelp"
+    IncludedZones
+        "ClearDisplay"
+    IncludedZonesEnd
+
+    DisplayUpper1 FixedTextDisplay "F1-4   "
+    DisplayUpper2 FixedTextDisplay "Routing"
+    DisplayUpper3 FixedTextDisplay " / Cut "
+    DisplayUpper4 FixedTextDisplay "/ Copy "
+    DisplayUpper5 FixedTextDisplay "/ Paste"
+ZoneEnd

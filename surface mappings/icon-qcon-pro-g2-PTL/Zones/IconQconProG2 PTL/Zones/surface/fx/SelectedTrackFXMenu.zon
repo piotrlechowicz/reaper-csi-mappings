@@ -1,0 +1,24 @@
+Zone "SelectedTrackFXMenu"
+    SelectedTrackFXMenuNavigator
+
+    DisplayUpper|   FXMenuNameDisplay
+    Rotary|         NoAction
+    RotaryPush|     GoFXSlot |
+
+    RecordArm|      Reaper "_S&M_SELFX|"  		// SWS/S&M: Select FX| for selected tracks
+    Property+RecordArm| NoFeedback
+
+    Solo|       Reaper "_S&M_TOGLFLOATFX|"      // _S&M_TOGLFLOATFX1
+    Mute|       Reaper "_S&M_FXBYP|"            // SWS/S&M: Toggle FX | bypass for selected tracks
+
+    Fader|      NoAction
+
+    DisplayLower1 FixedTextDisplay "Track: "
+    DisplayLower2 TrackNameDisplay
+    DisplayLower3 FixedTextDisplay " / Rec="
+    DisplayLower4 FixedTextDisplay "Select "
+    DisplayLower5 FixedTextDisplay "/ Solo="
+    DisplayLower6 FixedTextDisplay "Float  /"
+    DisplayLower7 FixedTextDisplay "/ Mute="
+    DisplayLower8 FixedTextDisplay "Bypass "
+ZoneEnd

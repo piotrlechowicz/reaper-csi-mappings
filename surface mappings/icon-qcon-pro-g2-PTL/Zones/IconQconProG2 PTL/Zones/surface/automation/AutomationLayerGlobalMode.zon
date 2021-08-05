@@ -1,0 +1,21 @@
+Zone "AutomationLayerGlobalMode"
+    /========== Navigation
+    Automation  Reaper "_ptl_surface_toggler_automation_toggle"
+    Automation  Reaper "_ptl_surface_toggler_automation_on"
+    Automation  Reaper "40876"   // Global automation override: No override (set automation modes per track)
+    Automation  GoZone "AutomationLayerChannelMode"
+
+    Shift+Automation GoZone "AutomationFunctionKeys"
+    Property+Shift+Automation NoFeedback
+
+
+    /========== Implementation
+
+    Read GlobalAutoMode "1" 				// Set global automation to Read mode
+    Touch GlobalAutoMode "2"				// Set global automation Touch mode
+    Trim  GlobalAutoMode "0"			// Set track to automation Trim/Read mode
+
+    Shift+Read GlobalAutoMode "3"				// Set global automation Write mode
+    Shift+Touch GlobalAutoMode "4"			// Set global automation Latch mode
+    Shift+Trim GlobalAutoMode "5"			// Set global automation LatchPreview mode
+ZoneEnd

@@ -1,0 +1,17 @@
+/ ==========================================
+/ Test ZONE file providing very limited functionality
+/ ==========================================
+/ 
+/ It is used to test if controller is working at all.
+/ The zone file provides basic functions such as Play/Stop/Rewind/Record.
+/ Note that to test this, buttons in .mst file should be named accordingly.
+/
+
+Zone Home
+	/ basic transport functions
+	Play Play
+	Stop Stop
+	Rewind Rewind
+	FastForward FastForward
+	Loop CycleTimeline
+ZoneEnd
