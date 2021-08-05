@@ -1,0 +1,28 @@
+Zone "TrackSendSlot"
+    TrackSendSlotNavigator
+
+    DisplayUpper|      TrackSendNameDisplay
+    DisplayLower|      TrackNameDisplay
+
+    Control+DisplayLower|       TrackSendPanDisplay
+    Control+Alt+DisplayLower|   TrackSendPanDisplay
+    Alt+DisplayLower|           TrackSendVolumeDisplay
+
+    Rotary|         TrackSendPan
+    RotaryPush|     TrackSendPrePost
+
+    RecordArm|      TrackSendPrePost
+    InvertFB+Solo|  TrackSendPrePost
+
+    Mute|           TrackSendMute
+    Fader|          TrackSendVolume
+    Fader|Touch+DisplayLower|   TrackSendVolumeDisplay
+
+    BankLeft           SendSlotBank "-1"
+    BankRight          SendSlotBank "1"
+
+    ChannelRight TrackBank "1"
+    Shift+ChannelRight TrackBank "8"
+    ChannelLeft TrackBank "-1"
+    Shift+ChannelLeft TrackBank "-8"
+ZoneEnd

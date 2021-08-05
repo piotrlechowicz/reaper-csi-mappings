@@ -1,0 +1,75 @@
+Zone "VST: ReaComp (Cockos)" ReComp
+	SelectedTrackNavigator
+/	FocusedFXNavigator // Not using as I haven't figured it out
+	
+	DisplayUpper1	FXParamNameDisplay 1 "VST: Re"
+	DisplayUpper2	FXParamNameDisplay 1 "aComp ("
+	DisplayUpper3	FXParamNameDisplay 1 "Cockos)"
+	DisplayLower1	FXParamNameDisplay 1 "Thresh"
+	DisplayLower2	FXParamNameDisplay 1 "Attack"
+	DisplayLower3	FXParamNameDisplay 1 "Releas"
+	DisplayLower4	FXParamNameDisplay 1 "Ratio"
+	DisplayLower5	FXParamNameDisplay 1 "Wet"
+	DisplayLower6	FXParamNameDisplay 1 "Dry"
+	DisplayLower7	FXParamNameDisplay 1 "LoPass"
+	DisplayLower8	FXParamNameDisplay 1 "HiPass"
+	
+	Rotary1 		NoAction				//FXParam 0	"Thresh"
+	Shift+Rotary1	NoAction
+	Rotary2			FXParam 4	"PreComp"
+	Shift+Rotary2	NoAction
+	Rotary3			NoAction				//FXParam 3	"Releas"
+	Shift+Rotary3	NoAction
+	Rotary4			FXParam 14	"Knee"
+	Shift+Rotary4	NoAction
+	Rotary5 		NoAction				//FXParam 11	"Wet"
+	Shift+Rotary5	NoAction
+	Rotary6 		NoAction				//FXParam 10	"Dry"
+	Shift+Rotary6	NoAction
+	Rotary7			FXParam 6	"LoPass"
+	Shift+Rotary7	NoAction
+	Rotary8			FXParam	13	"RMS Size"
+	Shift+Rotary8	NoAction
+	RecordArm1		NoAction
+	RecordArm2		NoAction
+	RecordArm3		NoAction
+	RecordArm4		NoAction
+	RecordArm5		NoAction
+	RecordArm6		NoAction
+	RecordArm7		NoAction
+	RecordArm8		NoAction
+	Solo1			NoAction
+	Solo2			NoAction
+	Solo3			NoAction
+	Solo4			NoAction
+	Solo5			NoAction
+	Solo6			NoAction
+	Solo7			NoAction
+	Solo8			NoAction
+	Mute1			NoAction
+	Mute2			NoAction
+	Mute3			NoAction
+	Mute4			NoAction
+	Mute5			FXParam 18 "limit"
+	Mute6			NoAction
+	Mute7			NoAction
+	Mute8			NoAction
+	Select1			NoAction
+	Select2			NoAction
+	Select3			NoAction
+	Select4			NoAction
+	Select5			NoAction
+	Select6			NoAction
+	Select7			NoAction
+	Select8			NoAction
+	Fader1			FXParam 0	"Thresh"
+	Fader2			FXParam 2	"Attack"
+	Fader3			FXParam 3	"Releas"
+	Fader4			FXParam 1	"Ratio"
+	Fader5			FXParam 11	"Wet"
+	Fader6			FXParam 10	"Dry"
+	Fader7			FXParam 6	"LoPass"
+	Fader8			FXParam	7	"HiPass"
+	
+
+ZoneEnd

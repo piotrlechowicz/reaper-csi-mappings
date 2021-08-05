@@ -1,0 +1,45 @@
+Zone "Home"
+	/ set up initialization items
+	OnInitialization  Reaper "_ptl_surface_toggler_clear_all_toggles"		// set mode buttons lit to initial state
+	OnInitialization  Reaper "_ptl_surface_toggler_pan_on"
+
+  	/ ----------------------------------------
+	/ Modifiers
+	/ ----------------------------------------
+	/ Modifiers needs to be loaded first, as the other zones can access it
+	/ ----------------------------------------
+
+	Option 		Option		// Use Flip as option (it does not support latching mode)
+	Control    	Control		// VST button is Control
+	Alt        	Alt			// Master button is Alt
+	Shift     	Shift		// Shift button is Shift
+ 	OtherShift 	Shift 	    // Scrub is used as another Shift as the primary one
+						    // does hold light lit when button stay pressed
+  	/ -----------------------------------------
+	/ IncludedZones
+	/ -----------------------------------------
+
+	IncludedZones
+		"LayerSelection"			// LayerSelection.zon
+		"Transport"					// common/Transport.zon
+		"Save"						// common/Save.zon
+		"ViewLayer"					// view/ViewLayer.zon
+		"JogWheel"					// common/JogWheel.zon
+		"ChangeDisplay"				// common/ChangeDisplay.zon
+		"Marker"					// common/Marker.zon
+		"ChannelsLayer"				// channels/ChannelsLayer.zon  // aka Pan mode
+		"Channel"					// separate include to prevent crushing when moving between zones
+		"AutomationLayer"			// automation/GlobalAutomation.zon
+		"OtherButtons"				// common/OtherButtons.zon
+	IncludedZonesEnd
+
+	// brings you to the Home Zone if you are stuck in another zone
+	Home Reaper "_ptl_surface_toggler_clear_all_toggles"
+	Home Reaper "_ptl_surface_toggler_pan_on"
+	Home GoZone Home
+
+	/ For debug purposes
+	 Control+Shift+Home Reaper "41743"		// Control surface: Refresh all surfaces -
+											// used for debugging to avoid restart of Reaper
+											// useful to map in reaper to keyboard shortcut as well (e.g. cmd+option+f1)
+ZoneEnd

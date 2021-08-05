@@ -1,0 +1,151 @@
+Zone "VST3: DC8C3 (Klanghelm)" "DC8C3"
+	SelectedTrackNavigator
+
+	Option+DisplayUpper1 FXNameDisplay
+	Option+DisplayLower1 TrackNameDisplay
+
+	BankLeft 	  	Reaper "_S&M_PREVIOUS_SELFX_PRESET" // SWS/S&M: Trigger previous preset for selected FX of selected tracks
+	BankRight	  	Reaper "_S&M_NEXT_SELFX_PRESET"
+
+	DisplayUpper1 	FXParamNameDisplay 46 "EasyMode"
+	DisplayLower1 	FXParamValueDisplay 46 "EasyMode"
+	Rotary1			FXParam 46 [ 0 0.3 0.6 1 ] "EasyMode"
+	Rotary1			FXParam 45 [ 0 ] "View" // go back to easy mode from expert one
+	Fader1 NoAction
+
+	DisplayUpper2	FXParamNameDisplay 6
+	DisplayLower2 	FXParamValueDisplay 6
+	Rotary2 NoAction
+	Fader2 		  	FXParam 6 				"Threshold"
+
+	DisplayUpper3 	FXParamNameDisplay 2
+	DisplayLower3 	FXParamValueDisplay 2
+	Rotary3 NoAction
+	Fader3 		  	FXParam 2 				"Ratio"
+
+	DisplayUpper4 	FXParamNameDisplay 8
+	DisplayLower4 	FXParamValueDisplay 8
+	Rotary4 NoAction
+	Fader4 		  	FXParam 10 				"AttackSMOOTH"
+	Fader4			FXParam 13 				"AttackCRUSH"
+  	Fader4			FXParam 11 				"AttackPUNCH"
+	Fader4			FXParam 12 				"AttackSNAP"
+	Fader4			FXParam 8 				"Attack"
+
+	DisplayUpper5	FXParamNameDisplay 15
+	DisplayLower5	FXParamValueDisplay 15
+	Rotary5 NoAction
+	Fader5			FXParam 19 				"ReleaseCRUSH"
+	Fader5			FXParam 17 				"ReleasePUNCH"
+	Fader5			FXParam 16 				"ReleaseSMOOTH"
+	Fader5			FXParam 18 				"ReleaseSNAP"
+	Fader5			FXParam 15 				"Release"
+
+	DisplayUpper6	FXParamNameDisplay 0
+	DisplayLower6	FXParamValueDisplay 0
+	Rotary6 NoAction
+	Fader6			FXParam 0 				"SaturationAmount"
+
+	DisplayUpper7	FXParamNameDisplay 41
+	DisplayLower7	FXParamValueDisplay 41
+	Rotary7 NoAction
+	Fader7			FXParam 41 				"OutputGain"
+
+	DisplayUpper8 FXParamNameDisplay 42
+	DisplayLower8 FXParamValueDisplay 42
+	Rotary8	NoAction
+	Fader8 FXParam 42 "Mix"
+
+	Control+DisplayUpper1 	FXParamNameDisplay 45
+	Control+DisplayLower1 	FXParamValueDisplay 45
+	Control+Rotary1			FXParam 45 [ 0 1 ] 		"View"
+	Control+Fader1 NoAction
+
+	Control+DisplayUpper2	FXParamNameDisplay 35
+	Control+DisplayLower2 	FXParamValueDisplay 35
+	Control+Fader2 		  	FXParam 35			 	"HPfreq"
+	Control+Rotary2 NoAction
+
+	Control+DisplayUpper3	FixedTextDisplay "Sidechain"
+	Control+DisplayLower3 	FXParamValueDisplay 33
+	Control+Rotary3 		FXParam 33 [ 0 1 ] "ExternalSidechain"
+	Control+Fader3 NoAction
+
+	Control+DisplayUpper4	FXParamNameDisplay 37
+	Control+DisplayLower4 	FXParamValueDisplay 37
+	Control+Fader4 		FXParam 37 "LPfreq"
+	Control+Rotary4 Noaction
+
+	Control+DisplayUpper5	FXParamNameDisplay 3
+	Control+DisplayLower5 	FXParamValueDisplay 3
+	Control+Fader5 		NoAction
+	Control+Rotary5 	FXParam 3 "NegativeRatios" [ 0 1 ]
+
+	Control+DisplayUpper6	FXParamNameDisplay 4
+	Control+DisplayLower6 	FXParamValueDisplay 4
+	Control+Fader6 		FXParam 4 "RatioNegative
+	Control+Rotary6 	NoAction
+
+	Control+DisplayUpper7	FixedTextDisplay "SatMode"
+	Control+DisplayLower7 	FXParamValueDisplay 27
+	Control+Fader7 		NoAction
+	Control+Rotary7 	FXParam 27 [ 0 0.5 1 ] "Saturation"
+
+
+
+	/ FXParam 0 "SaturationAmount"
+	/ FXParam 1 "OperationMode"
+	/ FXParam 2 "Ratio"
+	/ FXParam 3 "NegativeRatios"
+	/ FXParam 4 "RatioNegative"
+	/ FXParam 5 "FeedBackMix"
+	/ FXParam 6 "Threshold"
+	/ FXParam 7 "Range"
+	/ FXParam 8 "Attack"
+	/ FXParam 9 "AttackX10"
+	/ FXParam 10 "AttackSMOOTH"
+	/ FXParam 11 "AttackPUNCH"
+	/ FXParam 12 "AttackSNAP"
+	/ FXParam 13 "AttackCRUSH"
+	/ FXParam 14 "AttackProgramDependency"
+	/ FXParam 15 "Release"
+	/ FXParam 16 "ReleaseSMOOTH"
+	/ FXParam 17 "ReleasePUNCH"
+	/ FXParam 18 "ReleaseSNAP"
+	/ FXParam 19 "ReleaseCRUSH"
+	/ FXParam 20 "ReleaseProgramDependency"
+	/ FXParam 21 "Shape"
+	/ FXParam 22 "ShapeAmount"
+	/ FXParam 23 "RMSTime"
+	/ FXParam 24 "PreAttack"
+	/ FXParam 25 "HoldTime"
+	/ FXParam 26 "GRSmoothing"
+	/ FXParam 27 "Saturation"
+	/ FXParam 28 "SaturationPosition"
+	/ FXParam 29 "ChannelSeparation"
+	/ FXParam 30 "SCurveAttack"
+	/ FXParam 31 "SCurveRelease"
+	/ FXParam 32 "SmoothDetector"
+	/ FXParam 33 "ExternalSidechain"
+	/ FXParam 34 "SidechainListen"
+	/ FXParam 35 "HPfreq"
+	/ FXParam 36 "HPF12dB"
+	/ FXParam 37 "LPfreq"
+	/ FXParam 38 "LPF12dB"
+	/ FXParam 39 "Tilt"
+	/ FXParam 40 "InputGain"
+	/ FXParam 41 "OutputGain"
+	/ FXParam 42 "Mix"
+	/ FXParam 43 "Clip"
+	/ FXParam 44 "CalibrationLevel"
+	/ FXParam 45 "View"
+	/ FXParam 46 "EasyMode"
+	/ FXParam 47 "MeterType"
+	/ FXParam 48 "OSrealtime"
+	/ FXParam 49 "OSoffline"
+	/ FXParam 50 "AGC"
+	/ FXParam 51 "Bypass"
+	/ FXParam 52 "Bypass"
+	/ FXParam 53 "Bypass"
+	/ FXParam 54 "Wet"
+ZoneEnd

@@ -1,0 +1,24 @@
+Zone "FxMapChannel"
+
+    /--- channel control
+
+    RecordArm7 NoAction
+    RecordArm8 Reaper       "41984"	// FX: Arm track envelope for last touched FX parameter
+
+    Mute7 NoAction
+    Mute8 Reaper "41983"		// FX: Activate/bypass track envelope for last touched FX parameter
+
+    Select7 NoAction
+    Select8 Reaper "41142"		// FX: Show/hide track envelope for last touched FX parameter
+
+    Fader7 NoAction
+	Fader8 NoAction
+	Rotary7 NoAction
+	Rotary8 NoAction
+
+    MasterFader     FocusedFXParam
+    DisplayUpper7   FixedTextDisplay "/ Map: "
+    DisplayLower7   FixedTextDisplay "/ Val: "
+    DisplayUpper8   FocusedFXParamNameDisplay
+    DisplayLower8   FocusedFXParamValueDisplay
+ZoneEnd

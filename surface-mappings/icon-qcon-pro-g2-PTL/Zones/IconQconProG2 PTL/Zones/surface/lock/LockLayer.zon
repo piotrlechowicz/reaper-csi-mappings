@@ -1,0 +1,61 @@
+Zone "LockLayer"
+    IncludedZones
+        "ClearDisplay"
+    IncludedZonesEnd
+
+    DisplayUpper1 FixedTextDisplay "Togl / "
+
+    DisplayUpper2 FixedTextDisplay "Use sel"
+    DisplayUpper3 FixedTextDisplay "ect to "
+    DisplayUpper4 FixedTextDisplay "enable "
+    DisplayUpper5 FixedTextDisplay "/R1=sho"
+    DisplayUpper6 FixedTextDisplay "w/S1=se"
+    DisplayUpper7 FixedTextDisplay "t al/M1"
+    DisplayUpper8 FixedTextDisplay "=clr al"
+
+    DisplayLower1 FixedTextDisplay "Lock   "
+    DisplayLower2 FixedTextDisplay "Time   "
+    DisplayLower3 FixedTextDisplay "Item   "
+    DisplayLower4 FixedTextDisplay "Trk env"
+    DisplayLower5 FixedTextDisplay " Region"
+    DisplayLower6 FixedTextDisplay " Marker"
+    DisplayLower7 FixedTextDisplay " Sign. "
+    DisplayLower8 FixedTextDisplay "Loop   "
+
+    RecordArm1 Reaper "40277"	// Options: Show lock settings
+
+    Select1 Reaper "1135" // Options: Toggle locking
+    Solo1 Reaper "40568" // Locking: Set all lock modes
+    Mute1 Reaper "40567" // Locking: Set all lock modes
+
+    Select2 Reaper "40573" // Locking: Toggle time selection locking mode
+    Select3 Reaper "40576" // Locking: Toggle full item locking mode
+    Select4 Reaper "40585" // Locking: Toggle track envelope locking mode
+    Select5 Reaper "40588" // Locking: Toggle region locking mode
+    Select6 Reaper "40591" // Locking: Toggle marker locking mode
+    Select7 Reaper "40594" // Locking: Toggle time signature marker locking mode
+    Select8 Reaper "40629" // Locking: Toggle loop points locking mode
+
+    RecordArm2 NoAction
+    RecordArm3 NoAction
+    RecordArm4 NoAction
+    RecordArm5 NoAction
+    RecordArm6 NoAction
+    RecordArm7 NoAction
+    RecordArm8 NoAction
+
+    Mute2 NoAction
+    Mute3 NoAction
+    Mute4 NoAction
+    Mute5 NoAction
+    Mute6 NoAction
+    Mute7 NoAction
+    Mute8 NoAction
+    Solo2 NoAction
+    Solo3 NoAction
+    Solo4 NoAction
+    Solo5 NoAction
+    Solo6 NoAction
+    Solo7 NoAction
+    Solo8 NoAction
+ZoneEnd

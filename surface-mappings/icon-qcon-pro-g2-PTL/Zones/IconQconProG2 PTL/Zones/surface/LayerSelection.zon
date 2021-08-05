@@ -1,0 +1,70 @@
+Zone "LayerSelection"
+
+	Pan Reaper "_ptl_surface_toggler_pan_toggle"	// required to map toggle to the button
+	Pan Reaper "_ptl_surface_toggler_pan_on"		// turn that toggle on
+	Pan Reaper "_ptl_surface_toggler_sends_off"		// switch other toggles off
+	Pan Reaper "_ptl_surface_toggler_receives_off"
+	Pan Reaper "_ptl_surface_toggler_inserts_off"
+	Pan Reaper "_ptl_surface_toggler_project_off"
+	Pan UnmapSelectedTrackSendsFromWidgets			// unmap or sent channels
+	Pan UnmapTrackSendsSlotFromWidgets
+	Pan UnmapSelectedTrackReceivesFromWidgets
+	Pan UnmapTrackReceivesSlotFromWidgets
+	Pan UnmapSelectedTrackFXFromMenu
+	Pan GoZone "ChannelsLayer"						// go zone for extra functions
+
+	Sends Reaper "_ptl_surface_toggler_sends_toggle"
+	Sends Reaper "_ptl_surface_toggler_pan_off"
+	Sends Reaper "_ptl_surface_toggler_sends_on"
+	Sends Reaper "_ptl_surface_toggler_receives_off"
+	Sends Reaper "_ptl_surface_toggler_inserts_off"
+	Sends Reaper "_ptl_surface_toggler_project_off"
+	Sends MapSelectedTrackSendsToWidgets
+	Sends GoZone "SendsLayer"
+
+	Option+Sends Reaper "_ptl_surface_toggler_sends_toggle"
+	Option+Sends Reaper "_ptl_surface_toggler_pan_off"
+	Option+Sends Reaper "_ptl_surface_toggler_sends_on"
+	Option+Sends Reaper "_ptl_surface_toggler_receives_off"
+	Option+Sends Reaper "_ptl_surface_toggler_inserts_off"
+	Option+Sends Reaper "_ptl_surface_toggler_project_off"
+	Option+Sends MapTrackSendsSlotToWidgets
+	Option+Sends GoZone "SendsLayer"
+
+	Receives Reaper "_ptl_surface_toggler_receives_toggle"
+	Receives Reaper "_ptl_surface_toggler_pan_off"
+	Receives Reaper "_ptl_surface_toggler_sends_off"
+	Receives Reaper "_ptl_surface_toggler_receives_on"
+	Receives Reaper "_ptl_surface_toggler_inserts_off"
+	Receives Reaper "_ptl_surface_toggler_project_off"
+	Receives MapSelectedTrackReceivesToWidgets
+	Receives GoZone "ReceivesLayer"
+
+	Option+Receives Reaper "_ptl_surface_toggler_receives_toggle"
+	Option+Receives Reaper "_ptl_surface_toggler_pan_off"
+	Option+Receives Reaper "_ptl_surface_toggler_sends_off"
+	Option+Receives Reaper "_ptl_surface_toggler_receives_on"
+	Option+Receives Reaper "_ptl_surface_toggler_inserts_off"
+	Option+Receives Reaper "_ptl_surface_toggler_project_off"
+	Option+Receives MapTrackReceivesSlotToWidgets
+	Option+Receives GoZone "ReceivesLayer"
+
+	Inserts Reaper "_ptl_surface_toggler_inserts_toggle"
+	Inserts Reaper "_ptl_surface_toggler_pan_off"
+	Inserts Reaper "_ptl_surface_toggler_sends_off"
+	Inserts Reaper "_ptl_surface_toggler_receives_off"
+	Inserts Reaper "_ptl_surface_toggler_inserts_on"
+	Inserts Reaper "_ptl_surface_toggler_project_off"
+	Inserts MapSelectedTrackFXToMenu
+	Inserts GoZone "FxLayer"
+
+	Project Reaper "_ptl_surface_toggler_project_toggle"
+    Project Reaper "_ptl_surface_toggler_project_on"
+	Project GoZone "ProjectLayer"
+
+	Shift+Project GoZone "LockLayer"
+
+	Map Reaper "_ptl_surface_toggler_map_toggle"
+    Map Reaper "_ptl_surface_toggler_map_on"
+    Map GoZone "FxMapLayer"
+ZoneEnd

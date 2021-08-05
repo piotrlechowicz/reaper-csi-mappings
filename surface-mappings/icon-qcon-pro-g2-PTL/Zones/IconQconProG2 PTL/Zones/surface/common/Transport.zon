@@ -1,0 +1,41 @@
+/ ***********************************
+/ Transport zone
+/
+/ Control - move to the start/end
+/ Alt - finner move mode
+/ Shift - move a lot
+/ Alt+Shift - playback
+/ ***********************************
+Zone "Transport"
+	Rewind 						Rewind
+	Alt+Rewind 					Reaper "40646"		// View: Move cursor left to grid division
+	Control+Rewind 				Reaper "40042"		// Transport: Go to start of project
+	Shift+Rewind 				Reaper "40084"		// rewind a lot
+
+	Loop 						CycleTimeline		// Toggle Repeat
+
+	FastForward 				FastForward
+	Alt+FastForward 			Reaper "40647"		// "View: Move cursor right to grid division"
+	Control+FastForward 		Reaper "40043"		// Transport: Go to end of project
+	Shift+FastForward 			Reaper "40085"		// FastForward a lot
+
+	Record 	Record
+	Play 	Play
+	Stop 	Stop
+
+	/----------------------------
+	/ TODO: move to dedicated section
+	/ record mode ALT modifier
+	/----------------------------
+	Shift+Record 			Reaper "_BR_CYCLE_RECORD_MODES"		// SWS/BR: Options - Cycle through record modes
+	/Shift+Rewind 			Reaper "40252"						// Record: Set record mode to normal
+	/Shift+Loop 			Reaper "40076"						// Record: Set record mode to time selection auto-punch
+	/Shift+FastForward 		Reaper "40253"						// Record: Set record mode to selected item auto-punch
+
+	/----------------------------
+	/ change playback speed - ALT + SHIFT modifier
+	/----------------------------
+	Alt+Shift+Rewind 				Reaper "40523"			// Transport: Decrease playrate by ~6% (one semitone)
+	Alt+Shift+Loop 					Reaper "40521"			// Transport: Set playrate to 1.0
+	Alt+Shift+FastForward 			Reaper "40522"			// Transport: Increase playrate by ~6% (one semitone)
+ZoneEnd

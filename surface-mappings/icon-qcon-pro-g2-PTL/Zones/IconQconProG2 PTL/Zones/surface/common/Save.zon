@@ -1,0 +1,13 @@
+/ ***********************************
+/ Save zone
+/ On surface named: "daw mode/utilities"
+/ *****************************************************************
+Zone "Save"
+	Undo 			Reaper "40029"		// Edit: Undo
+	Shift+Undo 		Reaper "40072"		// View: Show undo history window
+	Redo 			Reaper "40030"		// Edit: Redo
+	Save 			Reaper "40026"		// File: Save project
+	Shift+Save 		Reaper "41895"		// File: Save new version of project (automatically increment project name)
+	Alt+Save 		Reaper "40022"		// File: Save project as...
+	Control+Save 	Reaper "40015"		// File: Render project to disk...
+ZoneEnd

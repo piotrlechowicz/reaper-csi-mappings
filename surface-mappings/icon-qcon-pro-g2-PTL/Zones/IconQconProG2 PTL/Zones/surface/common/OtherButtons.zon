@@ -1,0 +1,3 @@
+Zone "OtherButtons"
+    Mixer Reaper "40078" // View: Toggle mixer visible
+ZoneEnd

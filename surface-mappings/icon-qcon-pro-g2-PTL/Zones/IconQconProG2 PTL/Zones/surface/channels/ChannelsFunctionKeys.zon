@@ -1,0 +1,19 @@
+Zone "ChannelsFunctionKeys"
+    Help GoZone "ChannelsFunctionKeysHelpMode"
+    Control+Help GoZone "ChannelsFunctionKeysHelpModeTwo"
+
+    F1  Reaper "_ptl_show_tracks_show_all_tracks"	           // PTL_show_tracks: Show all tracks
+    F2  Reaper "_ptl_show_tracks_show_all_top_level_tracks"	   // PTL_show_tracks: Show all top level tracks
+    F3  Reaper "_ptl_show_tracks_show_only_bus_tracks"         // PTL_show_tracks: Show Bus tracks (pattern="BUS")
+    F4  Reaper "_ptl_show_tracks_show_only_fx_bus_tracks"      // PTL_show_tracks: Show FX Bus tracks (pattern="FX")
+    F5  Reaper "_ptl_show_tracks_show_only_drums_tracks"	   // PTL_show_tracks: Show Drums tracks (pattern="Drum")
+    F6  Reaper "_ptl_show_tracks_show_only_bass_tracks"	       // PTL_show_tracks: Show Bass tracks (pattern="Bass")
+    F7  Reaper "_ptl_show_tracks_show_only_vocal_tracks"	   // PTL_show_tracks: Show Vocal tracks (pattern="Vocal")
+    F8  Reaper "_ptl_show_tracks_show_only_guitar_tracks"	   // PTL_show_tracks: Show Guitar tracks (pattern="Guitar")
+
+    F1L2 Reaper "_ptl_show_tracks_show_only_piano_tracks"      // PTL_show_tracks: Show Piano tracks (pattern="Piano")
+    F2L2 Reaper "_ptl_show_tracks_show_only_synth_tracks"      // PTL_show_tracks: Show Synth tracks (pattern="Synth")
+
+    F5L2 Reaper "_SWSTL_TOGGLE"			// SWS: Toggle selected track(s) fully visible/hidden
+    F6L2 Reaper "_SWSTL_HIDEUNSEL" 		// SWS: Hide unselected track(s)
+ZoneEnd

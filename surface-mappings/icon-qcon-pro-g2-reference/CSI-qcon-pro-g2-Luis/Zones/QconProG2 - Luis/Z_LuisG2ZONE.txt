@@ -1,0 +1,172 @@
+Zone Home
+	OnTrackSelection MapSelectedTrackSendsToWidgets
+	IncludedZones
+		"Buttons|"
+		"Channel|1-8"
+		"MasterChannel|"
+		"JogWheelHack|"
+	IncludedZonesEnd
+ZoneEnd
+
+Zone "Buttons|"
+	Send 		ToggleMapSelectedTrackSends
+	Track 		ToggleMapSelectedTrackFXMenu
+	Pan 		ToggleMapSelectedTrackFX
+        ChannelLeft 	TrackBank "-1"
+	ChannelRight 	TrackBank "1"
+	BankLeft 	TrackBank "-8"
+	BankRight 	TrackBank "8"
+	Rewind 		Rewind
+	FastForward	FastForward
+	Stop 		Stop
+	Play 		Play
+	Record 		Record
+	F1 		NextPage
+
+	smpteBeats CycleTimeDisplayModes
+	TimeDisplay TimeDisplay
+
+	Read 	TrackAutoMode 	"1"
+	Write 	TrackAutoMode 	"3"
+	Trim 	TrackAutoMode 	"0"
+	Touch 	TrackAutoMode 	"2"
+	Latch 	TrackAutoMode 	"4"
+	Group	Reaper 		"42023"
+
+	Shift+Read 	GlobalAutoMode 	"1"
+	Shift+Write 	GlobalAutoMode 	"3"
+	Shift+Trim 	GlobalAutoMode 	"0"
+	Shift+Touch 	GlobalAutoMode 	"2"
+	Shift+Latch 	GlobalAutoMode 	"4"
+	Shift+Group	Reaper 		"42024"
+
+	Save 		Reaper 		"40026"
+	Shift+Save 	Reaper 		"40022"
+
+	Undo 		Reaper 		"40029"
+	Shift+Undo 	Reaper 		"40030"
+
+	Shift 		Shift
+	Option 		Option
+	Control 	Control
+	Alt 		Alt
+
+	Marker 		Reaper 		"40172"
+	Shift+Marker 	Reaper 		"40157"
+	Option+Marker 	Reaper 		"40174"
+
+	Nudge 		Reaper 		"40173"
+	Cycle 		CycleTimeline
+	Click 		Reaper 		"40364"
+ZoneEnd
+
+
+Zone "Channel|"
+	TrackNavigator
+	DisplayUpper|  			TrackNameDisplay
+	DisplayLower| 			TrackPanDisplay
+	TrackTouch+DisplayLower| 	TrackVolumeDisplay
+	RotaryPush| 			GoZone PanWidth|
+	Rotary| 			TrackPan "0"
+	RecordArm|  			TrackRecordArm
+	Solo|  				TrackSolo
+	Mute| 				TrackMute
+	Select|  			TrackUniqueSelect
+	Shift+Select|  			TrackRangeSelect
+	Control+Select|  		TrackSelect
+	Shift+Control+Select| 		TogglePin
+	Option+Select| 			TrackFolderDive
+	Fader|  			TrackVolume
+	FaderTouch|  			TrackTouch
+ZoneEnd
+
+Zone "MasterChannel|"
+	MasterTrackNavigator
+	MasterFader 	TrackVolume
+zoneEnd
+
+Zone "Pan|1-8"
+	TrackNavigator
+	Rotary| 	TrackPan "0"
+	RotaryPush| 	GoZone PanWidth|
+ZoneEnd
+
+Zone "PanWidth|1-8"
+	TrackNavigator
+	Rotary| 	TrackPanWidth "1"
+	RotaryPush| 	GoZone Pan|
+ZoneEnd
+
+Zone "Send|1-8"
+	SelectedTrackNavigator
+	DisplayUpper|  			TrackSendNameDisplay
+	TrackTouch+DisplayUpper|	TrackSendVolumeDisplay
+	Mute| 				TrackSendMute
+	Fader|  			TrackSendVolume
+	TrackTouch+Fader|  		TrackSendVolume
+	FaderTouch|  			TrackTouch
+ZoneEnd
+
+Zone "FXMenu|1-4"
+	SelectedTrackNavigator
+	DisplayUpper|  	FXNameDisplay |
+	RotaryPush| 	GoFXSlot |
+ZoneEnd
+
+Zone "JogWheelHack|"
+	JogWheelRotaryCW Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW2 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW2 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW2 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW2 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW2 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW3 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW3 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW3 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW3 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW3 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW3 Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW4 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW4 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW4 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW4 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW4 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW4 Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW5 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW5 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW5 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW5 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW5 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW5 Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW6 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW6 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW6 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW6 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW6 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW6 Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW7 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW7 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW7 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW7 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW7 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW7 Reaper "40102" // CREATE JOG TIMESEL L
+	
+	JogWheelRotaryCW8 Reaper "41667" // NORMAL JOG RIGHT
+	JogWheelRotaryCCW8 Reaper "41666" // NORMAL JOG LEFT
+	Shift+JogWheelRotaryCW8 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+	Shift+JogWheelRotaryCCW8 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+	Control+JogWheelRotaryCW8 Reaper "40103" // CREATE JOG TIMESEL R
+	Control+JogWheelRotaryCCW8 Reaper "40102" // CREATE JOG TIMESEL L
+ZoneEnd

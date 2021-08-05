@@ -1,0 +1,230 @@
+this is my home zone for QconProX
+Zone Home
+	OnTrackSelection MapSelectedTrackSendsToWidgets
+	OnTrackSelection MapSelectedTrackFXToMenu
+
+	IncludedZones
+		"Buttons|"
+		"Channel|1-8"
+		"MasterChannel|"
+	IncludedZonesEnd
+
+ZoneEnd
+
+Zone "Buttons|"
+	/Shift Shift
+	Option Option
+	Control Control
+	Alt Alt
+	Blank1 Reaper "_S&M_SHOWNOTESHELP" // NOTES WINDOW
+	Blank2 Reaper "40016" // PREFERENCES
+	Blank3 Reaper "40605" // ACTION LIST
+	Blank4 Reaper "40454" // EDIT VIEW
+	Blank5 Reaper "40455" // MIXER VIEW
+	Send ToggleMapSelectedTrackSends
+	Pan Reaper "_dc1079a3ffd4a1438942a677566f9ed3"
+	Plugin ToggleMapSelectedTrackFXMenu
+	Plugin Reaper "_S&M_TOGLFXCHAIN"
+	Shift+Plugin GoZone FocusedFXParam
+	EQ GoPage Edit
+	ChannelLeft TrackBank "-1"
+	ChannelRight TrackBank "1"
+	BankLeft TrackBank "-8"
+	BankRight TrackBank "8"
+	TimeDisplay TimeDisplay
+	smpteBeats CycleTimeDisplayModes
+	Rewind Rewind
+	FastForward FastForward
+	Stop Stop
+	Play Play
+	Record Reaper "1013"
+	F1 Reaper "40495" // RECORD MONITOR MODE
+	F2 Reaper "40702" // CREATE NEW TRACK  
+	F3 Reaper "40701" // CREATE NEW TRACK/INSERT VIRTUAL INSTRU
+	F4 Reaper "40005" // REMOVE TRACK 
+	F5 Reaper "40062" // DUPLICATE TRACK 
+	F6 Reaper "41817" // CONTINUOUS SCROLLING
+	F7 Reaper "40042" // GO TO START
+	F8 Reaper "40296" // SELECT ALL TRACKS
+	F1L2 Reaper "40293" // VIEW ROUTING/SENDS FOR SEL TRACK
+	F2L2 Reaper "1042" // FOLDER COLLAPSE STATE
+	F3L2 Reaper "_S&M_TOGLFXCHAIN" // SHOW FX WINDOW FOR SEL TRACK
+	F4L2 Reaper "_S&M_FXBYPSEL" // BYPASS FX FOR SEL TRACK
+	F5L2 Reaper "_S&M_SELFXNEXT" // NEXT FX FOR SEL TRACK
+	F6L2 Reaper "40344" // BYPASS FX FOR ALL TRACKS
+	F7L2 Reaper "40549" // SHOW FX ABOVE MIXER
+	F8L2 Reaper "_BR_NORMALIZE_LOUDNESS_ITEMS" // NORMALIZE  
+	Read TrackAutoMode "1"
+	Shift+Read GlobalAutoMode "1"
+	Write TrackAutoMode "3"
+	Shift+Write GlobalAutoMode "3"
+	Trim TrackAutoMode "0"
+	Shift+Trim GlobalAutoMode "0"
+	Touch TrackAutoMode "2"
+	Shift+Touch GlobalAutoMode "2"
+	Latch TrackAutoMode "4"
+	Shift+Latch GlobalAutoMode "4"
+	Save Reaper "40026" 
+	Shift+Save Reaper "40022" // SAVE PROJECT AS 
+	Undo Reaper "40029"
+	Shift+Undo Reaper "40030" // REDO
+	Flip Reaper "40346" //MIDI Editor	40346	CC: Set CC lane to 108??
+	Normal Reaper "40173" // GO TO NEXT MARKER
+	Marker Reaper "40157" // INSERT MARKER
+	Loop CycleTimeline
+	nameValue GoZone Home
+	Click Reaper "40364" METRONOME
+	Solo Reaper "40340" // UNSOLO ALL TRACKS
+	Mode ToggleScrollLink 4
+	/Zoom Reaper "40113" // ZOOM SEL TRACK
+	Zoom Reaper "1007" // ZOOM SEL TRACK
+	Shift+Zoom Reaper "1008" // pause
+	Up Reaper "40111" // ZOOM IN VERTICAL
+	Down Reaper "40112" // ZOOM OUT VERTICAL
+	Left Reaper "1011" // ZOOM OUT HORIZONTAL
+	Right Reaper "1012" // ZOOM IN HORIZONTAL
+		JogWheelRotaryCW Reaper "_RSf7057531566864c3f1ae41c637c1859be7d1f08b" // Script: X-Raym_Move edit cursor to next frame.lua
+		JogWheelRotaryCCW Reaper "_RSf0e0d84c44ecb254aff79f4e8f6c6af8cf375fa9" // Script: X-Raym_Move edit cursor to previous frame.lua
+		Shift+JogWheelRotaryCW Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW2 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW2 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW2 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW2 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW2 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW2 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW3 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW3 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW3 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW3 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW3 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW3 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW4 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW4 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW4 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW4 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW4 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW4 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW5 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW5 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW5 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW5 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW5 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW5 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW6 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW6 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW6 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW6 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW6 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW6 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW7 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW7 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW7 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW7 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW7 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW7 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		JogWheelRotaryCW8 Reaper "41667" // NORMAL JOG RIGHT
+		JogWheelRotaryCCW8 Reaper "41666" // NORMAL JOG LEFT
+		Shift+JogWheelRotaryCW8 Reaper "_SWS_MOVECUR5MSRIGHT" // SLOW JOG
+		Shift+JogWheelRotaryCCW8 Reaper "_SWS_MOVECUR5MSLEFT" // SLOW JOG
+		Control+JogWheelRotaryCW8 Reaper "40103" // CREATE JOG TIMESEL R
+		Control+JogWheelRotaryCCW8 Reaper "40102" // CREATE JOG TIMESEL L
+		
+		Scrub Shift
+		/Scrub Shift //40020Time selection: Remove time selection and loop points
+	/MasterFader MasterTrackVolume
+ZoneEnd
+
+Zone "Channel|"
+	TrackNavigator
+	VUMeter|  TrackOutputMeterMaxPeakLR
+	/VUMeter|  TrackOutputMeterAverageLR
+	DisplayUpper|  TrackNameDisplay
+	DisplayLower|  TrackPanDisplay
+	TrackTouch+DisplayLower|  TrackVolumeDisplay
+	RotaryPush| GoZone PanWidth|
+	Rotary| TrackPan "0"
+	RecordArm|  TrackRecordArm
+	Solo|  TrackSolo
+	Mute| TrackMute
+	Select|  TrackUniqueSelect
+	Shift+Select|  TrackRangeSelect
+	Control+Select|  TrackSelect
+	Shift+Control+Select| TogglePin
+	Option+Select| TrackFolderDive
+     Alt+Select| TrackUniqueSelect
+     Alt+Select| Reaper "41665"
+	Fader|  TrackVolume
+	TrackTouch+Fader|  TrackVolume
+	FaderTouch|  TrackTouch
+ZoneEnd
+
+Zone "Pan|1-8"
+	TrackNavigator
+	Rotary| TrackPan "0"
+	RotaryPush| GoZone PanWidth|
+ZoneEnd
+
+Zone "PanWidth|1-8"
+	TrackNavigator
+	Rotary| TrackPanWidth "1"
+	RotaryPush| GoZone Pan|
+ZoneEnd
+
+Zone "Send|1-8"
+      SelectedTrackNavigator
+      DisplayUpper| TrackSendNameDisplay
+      TrackTouch+DisplayUpper| TrackSendVolumeDisplay
+      Mute| TrackSendMute
+      Fader| TrackSendVolume
+      Rotary| TrackSendPan
+      RotaryPush| NoAction
+      TrackTouch+Fader| TrackSendVolume
+      FaderTouch| TrackTouch
+ZoneEnd
+
+Zone "MasterChannel|"
+	MasterTrackNavigator
+     MasterChannelMeterLeft MasterTrackOutputMeter 0
+     MasterChannelMeterRight MasterTrackOutputMeter 1
+	MasterFader TrackVolume
+	MasterFaderTouch TrackTouch
+ZoneEnd
+
+Zone "FXMenu|1-8"
+      SelectedTrackNavigator
+      DisplayUpper| FXNameDisplay |
+      DisplayLower| NoAction
+      Rotary| NoAction
+      RotaryPush| GoFXSlot |
+ZoneEnd
+
+Zone "FocusedFXParam"
+      Fader1 FocusedFXParam
+      FaderTouch1 TrackTouch
+      DisplayUpper1 FocusedFXParamNameDisplay
+      DisplayLower1 FocusedFXParamValueDisplay
+      DisplayUpper2 NoAction
+      DisplayLower2 NoAction
+      DisplayUpper3 NoAction
+      DisplayLower3 NoAction
+      DisplayUpper4 NoAction
+      DisplayLower4 NoAction
+      DisplayUpper5 NoAction
+      DisplayLower5 NoAction
+      DisplayUpper6 NoAction
+      DisplayLower6 NoAction
+      DisplayUpper7 NoAction
+      DisplayLower7 NoAction
+      DisplayUpper8 NoAction
+      DisplayLower8 NoAction
+ZoneEnd

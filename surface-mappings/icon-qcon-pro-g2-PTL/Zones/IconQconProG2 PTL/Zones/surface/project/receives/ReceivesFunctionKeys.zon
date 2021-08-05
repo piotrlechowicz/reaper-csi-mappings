@@ -1,0 +1,8 @@
+Zone "ReceivesFunctionKeys"
+    Help GoZone "ReceivesFunctionKeysHelp"
+
+    F1 Reaper "40293"				// Track: View routing and I/O for current/last touched track"
+    F2 Reaper "_S&M_CUTSNDRCV4"     // SWS/S&M: Cut selected tracks receives
+    F3 Reaper "_S&M_COPYSNDRCV4"    // SWS/S&M: Copy selected tracks receives
+    F4 Reaper "_S&M_PASTSNDRCV4"    // SWS/S&M: Paste sends to selected receives
+ZoneEnd

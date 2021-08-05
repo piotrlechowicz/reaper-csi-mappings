@@ -1,0 +1,19 @@
+Zone "Marker"
+	/----- navigate through items, unsolo, unmute
+	OtherLeft 			Reaper "_SWS_SELPREVITEM"		// SWS: Select previous item (across tracks)
+	Shift+OtherLeft 	Reaper "_SWS_SELPREVITEM2"		// SWS: Select previous item, keeping current selection (across tracks)
+	OtherRight 			Reaper "_SWS_SELNEXTITEM"		// Item: SWS: Select next item (across tracks)
+	Shift+OtherRight 	Reaper "_SWS_SELNEXTITEM2"		//SWS: Select next item, keeping current selection (across tracks)
+
+	OtherSolo 			Reaper "40340"					// Track: Unsolo all tracks
+	Shift+OtherSolo 	Reaper "40339"					// Track: Unmute all tracks
+
+	/----- markers (layer2)
+	OtherLeftL2 		Reaper "40172"				// Markers: Go to previous marker/project start
+
+	OtherRightL2 		Reaper "40157"				// Markers: Insert marker at current position
+	Shift+OtherRightL2 	Reaper "40613"				// Markers: Delete marker near cursor
+	Alt+OtherRightL2 	Reaper "40171"				// Markers: Insert and/or edit marker at current position
+
+	OtherSoloL2 		Reaper "40173"				// Markers: Go to next marker/project end
+ZoneEnd

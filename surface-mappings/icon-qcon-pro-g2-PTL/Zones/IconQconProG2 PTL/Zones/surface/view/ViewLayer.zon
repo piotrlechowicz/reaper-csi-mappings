@@ -1,0 +1,8 @@
+/ *****************************************************************
+/ Responsible for scrolling view and zooming
+/ *****************************************************************
+Zone "ViewLayer"
+	IncludedZones
+		"ViewLayerScrollMode"
+	IncludedZonesEnd
+ZoneEnd

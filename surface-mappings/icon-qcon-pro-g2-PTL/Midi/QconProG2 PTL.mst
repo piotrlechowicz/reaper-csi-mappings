@@ -1,0 +1,833 @@
+/ ==========================================================================
+/ MST file for QCon Pro G2 by Piotr
+/ ==========================================================================
+/
+/ Adjusted for version CSI 1.1.
+/
+/ Most of the buttons are labled as it is printed on the iCon Qcon G2 surface (with white paint)
+/ instead on the provided Reaper overlay.
+/ Only few buttons are named differently based on the actions they provide.
+/ I am using white masking tape to label them on the surface.
+/ Below are presented changed button labels from printed ones to name which are visible on the tape.
+/ - NameValue -> Home
+/ - Flip -> Option/Flip
+/ - PageUp -> Pan
+/ - PageDown -> Sends
+/ - Pan -> Receives
+/ - EQ -> Automation
+/ - FX Send -> Map
+/ - Write -> Touch/Latch
+/ - Sends -> Trim/Latch Prv
+/ - Motors -> Help
+/ - VST -> Control
+/ - Master -> Alt
+/ - Scrub -> Shift
+/
+/ Note, two buttons are used as a shift - `shift` and `scrub`. Usually, modifiers are used as hold button,
+/ not toggle. However, after quick press and release of the button, it remains turned on. Original shift
+/ button on the surface do not remain lit in that case. Thus, other button is used as well to indicate
+/ that shift is turned on. (Otherwise surface behave weird if shift is pressed without knowing it and combining
+/ with other modifiers). Original Shift button also remains shift as it is located closer to
+/ control and alt buttons and allows for easier navigation.
+/
+/ In comments below 'printed' refers to the white mark printed on the surface. 'Reaper overlay' refers to the name printed on the
+/ provided overlay and which can be put on the surface. 'mapped name' refers to the name in zone files. 
+/
+/ v1.0 - 22.07.2021
+/ (match version to ZONE file version)
+/
+/
+/ ==========================================================================
+/ Based on MST file created by Luis from Sinisound
+/ https://siniarch.wixsite.com/sinisound/post/qcon-pro-g2-csi
+
+/ ==========================================================================
+/ CHANNELS NAVIGATION SECTION - bank through faders
+/ ==========================================================================
+Widget Option // printed: Flip
+	Press 90 32 7f 90 32 00
+	FB_TwoState 90 32 7f 90 32 00
+WidgetEnd
+
+Widget ChannelLeft
+	Press 90 30 7f
+WidgetEnd
+
+Widget ChannelRight
+	Press 90 31 7f
+WidgetEnd
+
+Widget BankLeft
+	Press 90 2E 7f
+WidgetEnd
+
+Widget BankRight
+	Press 90 2F 7f 
+WidgetEnd
+
+/ ==========================================================================
+/ CHANGE DISPLAY SECTION (printed: Display) - name/value, smpte
+/ ==========================================================================
+Widget Home // printed: NameValue
+	Press 90 34 7f 90 34 00
+    	/ FB_TwoState 90 34 7f 90 34 00
+WidgetEnd
+
+Widget SmpteBeats
+	Press 90 35 7f
+WidgetEnd
+
+/ ==========================================================================
+/ SAVE SECTION (Printed: DAW mode/utilities)
+/ ==========================================================================
+Widget Undo // Reaper overlay: Shift
+	Press 90 46 7f 90 46 00
+WidgetEnd
+
+Widget Redo // Reaper overlay: Option
+	Press 90 47 7f 90 47 00
+WidgetEnd
+
+Widget Save // Reaper overlay: Control
+	Press 90 48 7f 90 48 00
+WidgetEnd
+
+/ ==========================================================================
+/ FUNCTIONS SECTION (Printed: Functions) - function buttons from F1-F8. L2 refers to layer2.
+/ ==========================================================================
+Widget F1
+	Press 90 36 7f
+WidgetEnd
+
+Widget F2
+	Press 90 37 7f
+WidgetEnd
+
+Widget F3
+	Press 90 38 7f
+WidgetEnd
+
+Widget F4
+	Press 90 39 7f
+WidgetEnd
+
+Widget F5
+	Press 90 3a 7f
+WidgetEnd
+
+Widget F6
+	Press 90 3b 7f
+WidgetEnd
+
+Widget F7
+	Press 90 3c 7f
+WidgetEnd
+
+Widget F8
+	Press 90 3d 7f
+WidgetEnd
+
+Widget F1L2
+	Press 90 3e 7f
+WidgetEnd
+
+Widget F2L2
+	Press 90 3f 7f
+WidgetEnd
+
+Widget F3L2
+	Press 90 40 7f
+WidgetEnd
+
+Widget F4L2
+	Press 90 41 7f
+WidgetEnd
+
+Widget F5L2
+	Press 90 42 7f
+WidgetEnd
+
+Widget F6L2
+	Press 90 43 7f
+WidgetEnd
+
+Widget F7L2
+	Press 90 44 7f
+WidgetEnd
+
+Widget F8L2
+	Press 90 45 7f
+WidgetEnd
+
+/ ==========================================================================
+/ LAYER NAVIGATION SECTION (Printed: Assignments) - change layer section
+/ ==========================================================================
+
+Widget Pan // printed: PageUp, Reaper overlay: Blank1
+	Press 90 28 7f 90 28 00
+	FB_TwoState 90 28 7f 90 28 00
+WidgetEnd
+
+Widget Sends // printed: PageDown, Reaper overlay: Send
+	Press 90 29 7f 90 29 00
+	FB_TwoState 90 29 7f 90 29 00
+WidgetEnd
+
+Widget Receives // printed: Pan, Reaper overlay: Pan
+	Press 90 2a 7f 90 2a 00
+	FB_TwoState 90 2a 7f 90 2a 00
+WidgetEnd
+
+Widget Inserts // Reaper overlay: Plugin
+	Press 90 2b 7f 90 2b 00
+	FB_TwoState 90 2b 7f 90 2b 00
+WidgetEnd
+
+Widget Automation // printed: EQ
+	Press 90 2c 7f 90 2c 00
+	FB_TwoState 90 2c 7f 90 2c 00
+WidgetEnd
+
+Widget Map // printed: FXSend, Reaper overlay: Blank2
+	Press 90 2d 7f 90 2d 00
+	FB_TwoState 90 2d 7f 90 2d 00
+WidgetEnd
+
+/ ==========================================================================
+/ AUTOMATION SECTION - Printed buttons: Read, Write, Projects, Mixer...
+/ ==========================================================================
+
+Widget Read
+	Press 90 4a 7f 90 4a 00
+	FB_TwoState 90 4a 7f 90 4a 00
+WidgetEnd
+
+Widget Touch
+	Press 90 4b 7f 90 4b 00
+	FB_TwoState 90 4b 7f 90 4b 00
+WidgetEnd
+
+Widget Trim // printed: Sends, Reaper overlay: Trim
+	Press 90 4c 7f 90 4c 00
+	FB_TwoState 90 4c 7f 90 4c 00
+WidgetEnd
+
+Widget Project // Reaper overlay: Touch
+	Press 90 4d 7f 90 4d 00
+	FB_TwoState 90 4d 7f 90 4d 00
+WidgetEnd
+
+Widget Mixer // Reaper overlay: Latch
+	Press 90 4e 7f 90 4e 00
+	FB_TwoState 90 4e 7f 90 4e 00
+WidgetEnd
+
+Widget Help // printed: motors, Reaper overlay: Blank3
+	Press 90 4f 7f 90 4f 00
+	FB_TwoState 90 4f 7f 90 4f 00
+WidgetEnd
+
+/ ==========================================================================
+/ MODIFIER SECTION - Printed buttons: VST, Master...
+/ ==========================================================================
+
+
+Widget Control // printed: VST, Repear overlay: Save
+	Press 90 50 7f 90 50 00
+	FB_TwoState 90 50 7f 90 50 00
+WidgetEnd
+
+Widget Alt // printed: Master, Reaper overlay: Undo
+	Press 90 51 7f 90 51 00
+	FB_TwoState 90 51 7f 90 51 00
+WidgetEnd
+
+Widget Shift // Reaper overlay: Blank5 - will now be Shift
+	// this button does not handle well feedback light when it is on. It is possible that the button is in latched mode, and the 
+	// light does not indicate that.
+	// Therefore, when it is pressed light on secondary shift button is lit as well (Mapped name: OtherShift, printed: Scrub)
+	Press 90 53 7f 90 53 00
+	FB_TwoState 90 53 7f 90 53 00
+WidgetEnd
+
+Widget OtherShift // printed: Scrub
+	Press 90 65 7f 90 65 00
+	FB_TwoState 90 65 7f 90 65 00
+WidgetEnd
+
+
+/ ==========================================================================
+/ MARKER SECTION - printed buttons: Left, Right...
+/ ==========================================================================
+
+Widget OtherLeft // Reaper Overlay: Marker
+	Press 90 54 7f 90 54 00
+	// FB_TwoState 90 54 7f 90 54 00
+WidgetEnd
+
+Widget OtherLeftL2 // Reaper Overlay: Marker
+	Press 90 58 7f
+	// FB_TwoState 90 58 7f 90 58 00
+WidgetEnd
+
+Widget OtherRight // Reaper Overlay: Normal
+	Press 90 55 7f
+	// FB_TwoState 90 55 7f 90 55 00
+WidgetEnd
+
+Widget OtherRightL2 // Reaper Overlay: Normal
+	Press 90 59 7f
+	// FB_TwoState 90 59 7f 90 59 00
+WidgetEnd
+
+Widget OtherSolo // Reaper Overlay: Blank4
+	Press 90 52 7f
+	// FB_TwoState 90 52 7f 90 52 00
+WidgetEnd
+
+Widget OtherSoloL2 // Reaper Overlay: Blank4
+	Press 90 5a 7f
+	// FB_TwoState 90 5a 7f 90 5a 00
+WidgetEnd
+
+/ ==========================================================================
+/ TRANSPORT SECTION
+/ ==========================================================================
+
+Widget Rewind
+	Press 90 5b 7f
+	/FB_TwoState 90 5b 7f 90 5b 00
+WidgetEnd
+
+Widget Loop
+	Press 90 56 7f
+	FB_TwoState 90 56 7f 90 56 00
+WidgetEnd
+
+Widget FastForward
+	Press 90 5c 7f
+	/FB_TwoState 90 5c 7f 90 5c 00
+WidgetEnd
+
+Widget Record
+	Press 90 5f 7f
+	FB_TwoState 90 5f 7f 90 5f 00
+WidgetEnd
+
+Widget Play
+	Press 90 5e 7f
+	FB_TwoState 90 5e 7f 90 5e 00
+WidgetEnd
+
+Widget Stop
+	Press 90 5d 7f
+	FB_TwoState 90 5d 7f 90 5d 00
+WidgetEnd
+
+/ ==========================================================================
+/ ZOOM SECTION
+/ ==========================================================================
+Widget Up
+	Press 90 60 7f
+WidgetEnd
+
+Widget Left
+	Press 90 62 7f 90 62 00
+WidgetEnd
+
+Widget Zoom
+	Press 90 64 7f 90 64 00
+	FB_TwoState 90 64 7f 90 64 00
+WidgetEnd
+
+Widget Right
+	Press 90 63 7f 90 63 00
+WidgetEnd
+
+Widget Down
+	Press 90 61 7f
+WidgetEnd
+
+
+
+/ ==========================================================================
+/ JOG WHEEL SECTION - Developed a hack as JogWheel has 8 outputs depending on speed as per Cragster
+/ ==========================================================================
+Widget JogWheelRotaryCW
+	Press b0 3c 01
+WidgetEnd
+
+Widget JogWheelRotaryCW2
+     Press b0 3c 02
+WidgetEnd
+
+Widget JogWheelRotaryCW3
+     Press b0 3c 03
+WidgetEnd
+
+Widget JogWheelRotaryCW4
+     Press b0 3c 04
+WidgetEnd
+
+Widget JogWheelRotaryCW5
+     Press b0 3c 05
+WidgetEnd
+
+Widget JogWheelRotaryCW6
+     Press b0 3c 06
+WidgetEnd
+
+Widget JogWheelRotaryCW7
+     Press b0 3c 07
+WidgetEnd
+
+Widget JogWheelRotaryCW8
+     Press b0 3c 08
+WidgetEnd
+
+Widget JogWheelRotaryCCW
+     Press b0 3c 41
+WidgetEnd
+
+Widget JogWheelRotaryCCW2
+     Press b0 3c 42
+WidgetEnd
+
+Widget JogWheelRotaryCCW3
+     Press b0 3c 43
+WidgetEnd
+
+Widget JogWheelRotaryCCW4
+     Press b0 3c 44
+WidgetEnd
+
+Widget JogWheelRotaryCCW5
+     Press b0 3c 45
+WidgetEnd
+
+Widget JogWheelRotaryCCW6
+     Press b0 3c 46
+WidgetEnd
+
+Widget JogWheelRotaryCCW7
+     Press b0 3c 47
+WidgetEnd
+
+Widget JogWheelRotaryCCW8
+     Press b0 3c 48
+WidgetEnd
+
+/ ========================================================================================
+/ vvv CHANNELS SECTION vvv
+/
+/ ===========================================================================
+/ DISPLAY - Display Upper & Lower from Track 1-8 & Time display
+/ ==========================================================================
+Widget DisplayUpper1
+	FB_MCUDisplayUpper 0
+WidgetEnd
+
+Widget DisplayUpper2
+	FB_MCUDisplayUpper 1
+WidgetEnd
+
+Widget DisplayUpper3
+	FB_MCUDisplayUpper 2
+WidgetEnd
+
+Widget DisplayUpper4
+	FB_MCUDisplayUpper 3
+WidgetEnd
+
+Widget DisplayUpper5
+	FB_MCUDisplayUpper 4
+WidgetEnd
+
+Widget DisplayUpper6
+	FB_MCUDisplayUpper 5
+WidgetEnd
+
+Widget DisplayUpper7
+	FB_MCUDisplayUpper 6
+WidgetEnd
+
+Widget DisplayUpper8
+	FB_MCUDisplayUpper 7
+WidgetEnd
+
+Widget DisplayLower1
+	FB_MCUDisplayLower 0
+WidgetEnd
+
+Widget DisplayLower2
+	FB_MCUDisplayLower 1
+WidgetEnd
+
+Widget DisplayLower3
+	FB_MCUDisplayLower 2
+WidgetEnd
+
+Widget DisplayLower4
+	FB_MCUDisplayLower 3
+WidgetEnd
+
+Widget DisplayLower5
+	FB_MCUDisplayLower 4
+WidgetEnd
+
+Widget DisplayLower6
+	FB_MCUDisplayLower 5
+WidgetEnd
+
+Widget DisplayLower7
+	FB_MCUDisplayLower 6
+WidgetEnd
+
+Widget DisplayLower8
+	FB_MCUDisplayLower 7
+WidgetEnd
+
+Widget TimeDisplay
+	FB_MCUTimeDisplay
+WidgetEnd
+
+/ =======================================================
+/ ENCODERS - Rotaty knob and Rotary Push from Track 1-8
+/ =======================================================
+Widget RotaryPush1
+	Press 90 20 7f
+WidgetEnd
+
+Widget RotaryPush2
+	Press 90 21 7f
+WidgetEnd
+
+Widget RotaryPush3
+	Press 90 22 7f
+WidgetEnd
+
+Widget RotaryPush4
+	Press 90 23 7f
+WidgetEnd
+
+Widget RotaryPush5
+	Press 90 24 7f
+WidgetEnd
+
+Widget RotaryPush6
+	Press 90 25 7f
+WidgetEnd
+
+Widget RotaryPush7
+	Press 90 26 7f
+WidgetEnd
+
+Widget RotaryPush8
+	Press 90 27 7f
+WidgetEnd
+
+Widget Rotary1
+	Encoder b0 10 7f
+	FB_Encoder b0 10 7f
+	Toggle 90 20 7f
+WidgetEnd
+
+Widget Rotary2
+	Encoder b0 11 7f
+	FB_Encoder b0 11 7f
+	Toggle 90 21 7f
+WidgetEnd
+
+Widget Rotary3
+	Encoder b0 12 7f
+	FB_Encoder b0 12 7f
+	Toggle 90 22 7f
+WidgetEnd
+
+Widget Rotary4
+	Encoder b0 13 7f
+	FB_Encoder b0 13 7f
+	Toggle 90 23 7f
+WidgetEnd
+
+Widget Rotary5
+	Encoder b0 14 7f
+	FB_Encoder b0 14 7f
+	Toggle 90 24 7f
+WidgetEnd
+
+Widget Rotary6
+	Encoder b0 15 7f
+	FB_Encoder b0 15 7f
+	Toggle 90 25 7f
+WidgetEnd
+
+Widget Rotary7
+	Encoder b0 16 7f
+	FB_Encoder b0 16 7f
+	Toggle 90 26 7f
+WidgetEnd
+
+Widget Rotary8
+	Encoder b0 17 7f
+	FB_Encoder b0 17 7f
+	Toggle 90 27 7f
+WidgetEnd
+
+/ ====================================================
+/ TRACK BUTTONS Rec, Solo, Mute, Sel from Track 1-8
+/ ====================================================
+Widget RecordArm1
+	Press 90 00 7f
+	FB_TwoState 90 00 7f 90 00 00
+WidgetEnd
+
+Widget RecordArm2
+	Press 90 01 7f
+	FB_TwoState 90 01 7f 90 01 00
+WidgetEnd
+
+Widget RecordArm3
+	Press 90 02 7f
+	FB_TwoState 90 02 7f 90 02 00
+WidgetEnd
+
+Widget RecordArm4
+	Press 90 03 7f
+	FB_TwoState 90 03 7f 90 03 00
+WidgetEnd
+
+Widget RecordArm5
+	Press 90 04 7f
+	FB_TwoState 90 04 7f 90 04 00
+WidgetEnd
+
+Widget RecordArm6
+	Press 90 05 7f
+	FB_TwoState 90 05 7f 90 05 00
+WidgetEnd
+
+Widget RecordArm7
+	Press 90 06 7f
+	FB_TwoState 90 06 7f 90 06 00
+WidgetEnd
+
+Widget RecordArm8
+	Press 90 07 7f
+	FB_TwoState 90 07 7f 90 07 00
+WidgetEnd
+
+Widget Solo1
+	Press 90 08 7f
+	FB_TwoState 90 08 7f 90 08 00
+WidgetEnd
+
+Widget Solo2
+	Press 90 09 7f
+	FB_TwoState 90 09 7f 90 09 00
+WidgetEnd
+
+Widget Solo3
+	Press 90 0a 7f
+	FB_TwoState 90 0a 7f 90 0a 00
+WidgetEnd
+
+Widget Solo4
+	Press 90 0b 7f
+	FB_TwoState 90 0b 7f 90 0b 00
+WidgetEnd
+
+Widget Solo5
+	Press 90 0c 7f
+	FB_TwoState 90 0c 7f 90 0c 00
+WidgetEnd
+
+Widget Solo6
+	Press 90 0d 7f
+	FB_TwoState 90 0d 7f 90 0d 00
+WidgetEnd
+
+Widget Solo7
+	Press 90 0e 7f
+	FB_TwoState 90 0e 7f 90 0e 00
+WidgetEnd
+
+Widget Solo8
+	Press 90 0f 7f
+	FB_TwoState 90 0f 7f 90 0f 00
+WidgetEnd
+
+Widget Mute1
+	Press 90 10 7f
+	FB_TwoState 90 10 7f 90 10 00
+WidgetEnd
+
+Widget Mute2
+	Press 90 11 7f
+	FB_TwoState 90 11 7f 90 11 00
+WidgetEnd
+
+Widget Mute3
+	Press 90 12 7f
+	FB_TwoState 90 12 7f 90 12 00
+WidgetEnd
+
+Widget Mute4
+	Press 90 13 7f
+	FB_TwoState 90 13 7f 90 13 00
+WidgetEnd
+
+Widget Mute5
+	Press 90 14 7f
+	FB_TwoState 90 14 7f 90 14 00
+WidgetEnd
+
+Widget Mute6
+	Press 90 15 7f
+	FB_TwoState 90 15 7f 90 15 00
+WidgetEnd
+
+Widget Mute7
+	Press 90 16 7f
+	FB_TwoState 90 16 7f 90 16 00
+WidgetEnd
+
+Widget Mute8
+	Press 90 17 7f
+	FB_TwoState 90 17 7f 90 17 00
+WidgetEnd
+
+Widget Select1
+	Press 90 18 7f
+	FB_TwoState 90 18 7f 90 18 00
+WidgetEnd
+
+Widget Select2
+	Press 90 19 7f
+	FB_TwoState 90 19 7f 90 19 00
+WidgetEnd
+
+Widget Select3
+	Press 90 1a 7f
+	FB_TwoState 90 1a 7f 90 1a 00
+WidgetEnd
+
+Widget Select4
+	Press 90 1b 7f
+	FB_TwoState 90 1b 7f 90 1b 00
+WidgetEnd
+
+Widget Select5
+	Press 90 1c 7f
+	FB_TwoState 90 1c 7f 90 1c 00
+WidgetEnd
+
+Widget Select6
+	Press 90 1d 7f
+	FB_TwoState 90 1d 7f 90 1d 00
+WidgetEnd
+
+Widget Select7
+	Press 90 1e 7f
+	FB_TwoState 90 1e 7f 90 1e 00
+WidgetEnd
+
+Widget Select8
+	Press 90 1f 7f
+	FB_TwoState 90 1f 7f 90 1f 00
+WidgetEnd
+
+/ ===============================================
+/ FADERS - Faders & Fader Touch from Track 1-8
+/ ===============================================
+Widget Fader1
+	Fader14Bit e0 7f 7f
+	FB_Fader14Bit e0 7f 7f
+	Touch 90 68 7f 90 68 00
+WidgetEnd
+
+Widget Fader2
+	Fader14Bit e1 7f 7f
+	FB_Fader14Bit e1 7f 7f
+	Touch 90 69 7f 90 69 00
+WidgetEnd
+
+Widget Fader3
+	Fader14Bit e2 7f 7f
+	FB_Fader14Bit e2 7f 7f
+	Touch 90 6a 7f 90 6a 00
+WidgetEnd
+
+Widget Fader4
+	Fader14Bit e3 7f 7f
+	FB_Fader14Bit e3 7f 7f
+	Touch 90 6b 7f 90 6b 00
+WidgetEnd
+
+Widget Fader5
+	Fader14Bit e4 7f 7f
+	FB_Fader14Bit e4 7f 7f
+	Touch 90 6c 7f 90 6c 00
+WidgetEnd
+
+Widget Fader6
+	Fader14Bit e5 7f 7f
+	FB_Fader14Bit e5 7f 7f
+	Touch 90 6d 7f 90 6d 00
+WidgetEnd
+
+Widget Fader7
+	Fader14Bit e6 7f 7f
+	FB_Fader14Bit e6 7f 7f
+	Touch 90 6e 7f 90 6e 00
+WidgetEnd
+
+Widget Fader8
+	Fader14Bit e7 7f 7f
+	FB_Fader14Bit e7 7f 7f
+	Touch 90 6f 7f 90 6f 00
+WidgetEnd
+
+/ ==========================================================
+/ FADER VU METER - VU Meters next to Faders from Track 1-8
+/ ==========================================================
+Widget VUMeter1
+	FB_MCUVUMeter 0
+WidgetEnd
+
+Widget VUMeter2
+	FB_MCUVUMeter 1
+WidgetEnd
+
+Widget VUMeter3
+	FB_MCUVUMeter 2
+WidgetEnd
+
+Widget VUMeter4
+	FB_MCUVUMeter 3
+WidgetEnd
+
+Widget VUMeter5
+	FB_MCUVUMeter 4
+WidgetEnd
+
+Widget VUMeter6
+	FB_MCUVUMeter 5
+WidgetEnd
+
+Widget VUMeter7
+	FB_MCUVUMeter 6
+WidgetEnd
+
+Widget VUMeter8
+	FB_MCUVUMeter 7
+WidgetEnd
+
+/ ========================================
+/ MASTER FADER 
+/ ========================================
+Widget MasterFader
+	Fader14Bit e8 7f 7f
+	FB_Fader14Bit e8 7f 7f
+	Touch 90 70 7f 90 70 00
+WidgetEnd

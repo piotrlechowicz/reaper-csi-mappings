@@ -1,0 +1,5 @@
+Zone "FxMapLayer"
+    IncludedZones
+        "FxMapChannel"
+    IncludedZonesEnd
+ZoneEnd

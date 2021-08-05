@@ -1,0 +1,25 @@
+Zone "FxFunctionKeys"
+    Help GoZone "FxFunctionKeysHelpMode"
+    Control+Help GoZone "FxFunctionKeysHelpMode2"
+
+    F1         Reaper "_S&M_TOGLFXCHAIN"	   	  // SWS/S&M: Toggle show FX chain windows for selected
+    F2         Reaper "40271"                     // View: Show FX browser window
+    F3         Reaper "_S&M_SHOWFXCHAINSLOTS"     // SWS/S&M: Open/close Resources window (FX chains)
+    F4         Reaper "_S&M_WNCLS5"			      //	SWS/S&M: Close all floating FX windows for selected tracks"
+    Alt+F4     Reaper "_S&M_WNCLS4"			      // SWS/S&M: Close all floating FX windows
+
+    F5         Reaper "_S&M_PASTE_TRACKFXCHAIN1"   // SWS/S&M: Resources - Paste FX chain to selected items, slot 1
+	Shift+F5   Reaper "_S&M_TRACKFXCHAIN1"		   // SWS/S&M: Resources - Paste (replace) FX chain to selected items, slot 1
+	F6         Reaper "_S&M_PASTE_TRACKFXCHAIN2"   // SWS/S&M: Resources - Paste FX chain to selected items, slot 2
+	Shift+F6   Reaper "_S&M_TRACKFXCHAIN2"		   // SWS/S&M: Resources - Paste (replace) FX chain to selected items, slot 2
+	F7         Reaper "_S&M_PASTE_TRACKFXCHAIN3"   // SWS/S&M: Resources - Paste FX chain to selected items, slot 3
+	Shift+F7   Reaper "_S&M_TRACKFXCHAIN3"		   // SWS/S&M: Resources - Paste (replace) FX chain to selected items, slot 3
+	F8         Reaper "_S&M_PASTE_TRACKFXCHAIN4"   // SWS/S&M: Resources - Paste FX chain to selected items, slot 4
+	Shift+F8   Reaper "_S&M_TRACKFXCHAIN5"		   // SWS/S&M: Resources - Paste (replace) FX chain to selected items, slot 4
+
+    F1L2    Reaper "_S&M_NEXT_SELFX_PRESET" // SWS/S&M: Trigger next preset for selected FX of selected tracks
+    F2L2    Reaper "_S&M_PREVIOUS_SELFX_PRESET" // SWS/S&M: Trigger previous preset for selected FX of selected tracks
+
+    Control+Alt+F4L2    Reaper "_S&M_REMOVE_FX"	   // SWS/S&M: Remove selected FX for selected tracks
+
+ZoneEnd
